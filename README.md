@@ -4,6 +4,8 @@
 
 **🌐 Live site: https://timdashginger.github.io/ruski-corporation/**
 
+**✏️ 想修改这个网站？看 [编辑指南.md](编辑指南.md) —— 不用装任何软件，网页上就能改。**
+
 ## 关于 RUSKI
 
 RUSKI Corporation 是 Dash 与 Calvin、Jacky、Edison 于 2022 年共同创立的科幻地缘政治宇宙——一个"联合国模拟器"式的世界：每位玩家代表一个虚构国家，治理其政治与外交，在贸易、结盟与冲突推演中书写一颗平行星球的命运。
