@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://timdashginger.github.io/ruski-corporation/sitemap.xml
