@@ -4,7 +4,7 @@
 
 **🌐 Live site: https://timdashginger.github.io/ruski-corporation/**
 
-**✏️ 想修改这个网站？看 [编辑指南.md](编辑指南.md) —— 不用装任何软件，网页上就能改。**
+**✏️ 想修改这个网站？看 [编辑指南.md](编辑指南.md) —— 推荐用 TRAE 对话式修改（vibe coding），也可以用网页编辑器。**
 
 ## 关于 RUSKI
 
