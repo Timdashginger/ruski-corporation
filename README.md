@@ -1,14 +1,14 @@
-# RUSKI Corporation — 一个从纸上生长出来的世界
-
-> A sci-fi geopolitical universe built by teenagers since 2022.
+# RUSKI — A World Built on Paper Since 2022
 
 **🌐 Live site: https://timdashginger.github.io/ruski-corporation/**
 
 **✏️ 想修改这个网站？看 [编辑指南.md](编辑指南.md) —— 推荐用 TRAE 对话式修改（vibe coding），也可以用网页编辑器。**
 
+> 说明：2026-11 起网站改为**全英文展示版**，面向英国 6th form 面试。旧版为中文。
+
 ## 关于 RUSKI
 
-RUSKI Corporation 是 Dash 与 Calvin、Jacky、Edison 于 2022 年共同创立的科幻地缘政治宇宙——一个"联合国模拟器"式的世界：每位玩家代表一个虚构国家，治理其政治与外交，在贸易、结盟与冲突推演中书写一颗平行星球的命运。
+RUSKI Corporation 是 Dash 与 Calvin 于 2022 年共同创立的科幻地缘政治宇宙（早期成员另有 Jack、Edison、Renhai）——一个"联合国模拟器"式的世界：每位玩家代表一个虚构国家，治理其政治与外交，在贸易、结盟与冲突推演中书写一颗平行星球的命运。
 
 - 创立时间：2022 年 · 持续创作 4 年
 - 世界地图：已迭代 6 版（六大大陆 · 三大洋）

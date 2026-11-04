@@ -1,1406 +1,951 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RUSKI Corporation — 一个从纸上生长出来的世界</title>
-<meta name="description" content="RUSKI Corporation：四位少年自2022年起持续构建的科幻地缘政治宇宙。发展历史、世界档案、国家图鉴、玩家共建与社区宪章。">
-<meta name="keywords" content="RUSKI, 科幻, 世界构建, worldbuilding, 地缘政治, 桌面推演, 少年创作, sci-fi universe">
-<meta name="author" content="RUSKI Corporation 创始团队">
+<title>RUSKI — A World Built on Paper Since 2022</title>
+<meta name="description" content="RUSKI is a fictional world built by two students since 2022: more than twenty nations, five industries, and a four-year archive of hand-drawn design work. From a bottle of vodka to a carrier.">
+<meta name="author" content="Dash &amp; Calvin">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://timdashginger.github.io/ruski-corporation/">
-<meta property="og:title" content="RUSKI Corporation — 一个从纸上生长出来的世界">
-<meta property="og:description" content="四位少年，四年笔耕，手绘六大大陆、三大洋与一个没有核武器的平行星球。现在，它向所有玩家敞开大门。">
-<meta property="og:image" content="https://timdashginger.github.io/ruski-corporation/assets/originals/world_map_v6.png">
-<meta property="og:site_name" content="RUSKI Corporation">
-<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="RUSKI — A World Built on Paper Since 2022">
+<meta property="og:description" content="Two students, four years, one invented world: more than twenty nations, five industries and a hand-drawn design archive.">
+<meta property="og:image" content="https://timdashginger.github.io/ruski-corporation/assets/world/world-map.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="RUSKI Corporation — 一个从纸上生长出来的世界">
-<meta name="twitter:description" content="四位少年，四年笔耕，手绘六大大陆、三大洋与一个没有核武器的平行星球。现在，它向所有玩家敞开大门。">
-<meta name="twitter:image" content="https://timdashginger.github.io/ruski-corporation/assets/originals/world_map_v6.png">
 <link rel="canonical" href="https://timdashginger.github.io/ruski-corporation/">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,8 61,38 94,38 67,57 77,90 50,70 23,90 33,57 6,38 39,38' fill='%23ff8c1a'/></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=IBM+Plex+Mono:wght@400;600&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230d131b'/><polygon points='50,16 60,42 88,42 65,58 73,84 50,68 27,84 35,58 12,42 40,42' fill='%23a8232b'/></svg>">
 <style>
 :root{
-  --ink:#0a1020; --ink-2:#0f1830; --ink-3:#16223f;
-  --paper:#f2e9d3; --paper-2:#e9dcba; --paper-dark:#d8c69a;
-  --orange:#ff8c1a; --orange-deep:#e06f00;
-  --blue:#4a8fe0; --ice:#a8d4ee;
-  --red:#d63a2f; --gold:#e8b34b;
-  --line:rgba(168,212,238,.16);
-  --tx:#e8e2d0; --tx-dim:#9aa7c0;
-  --mono:'IBM Plex Mono',Consolas,monospace;
-  --serif:'Noto Serif SC','STZhongsong','SimSun',serif;
-  --hand:'Zhi Mang Xing','KaiTi',cursive;
+  --ink:#0c121a; --ink2:#141f2b; --ink3:#1d2b39;
+  --paper:#efe8d6; --paper2:#f8f3e7; --paper3:#e2d8c0;
+  --red:#a8232b; --amber:#c0822f; --teal:#2f6f6b;
+  --txt:#1b2430; --mut:#6d7785;
+  --serif:Georgia,"Times New Roman",Times,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,"Cascadia Mono",Consolas,"Courier New",monospace;
+  --maxw:1240px;
 }
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--ink);color:var(--tx);font-family:var(--serif);overflow-x:hidden;line-height:1.75}
-::selection{background:var(--orange);color:#0a1020}
-::-webkit-scrollbar{width:10px}
-::-webkit-scrollbar-track{background:var(--ink)}
-::-webkit-scrollbar-thumb{background:#2a3a60;border-radius:5px}
-::-webkit-scrollbar-thumb:hover{background:var(--orange)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--txt);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
-.container{width:min(1180px,92%);margin:0 auto}
-.mono{font-family:var(--mono)}
-.hand{font-family:var(--hand)}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;margin:0;line-height:1.15}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--red)}
+.eyebrow.lt{color:var(--amber)}
 
-/* ===== grain overlay ===== */
-body::after{
-  content:"";position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:.05;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.9'/%3E%3C/svg%3E");
-}
+/* ---------- nav ---------- */
+#nav{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(12,18,26,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.09)}
+#nav .inner{max-width:var(--maxw);margin:0 auto;padding:0 28px;height:56px;display:flex;align-items:center;gap:26px}
+#nav .brand{font-family:var(--serif);font-size:16px;font-weight:600;letter-spacing:.16em;color:#fff}
+#nav .brand span{color:var(--red)}
+#nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;margin-left:auto}
+#nav a{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.62);transition:.2s}
+#nav a:hover{color:#fff}
+@media(max-width:860px){#nav ul{display:none}}
 
-/* ===== nav ===== */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  background:rgba(10,16,32,.82);backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--line);
-  transition:transform .35s;
-}
-nav.hide{transform:translateY(-100%)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-weight:600;letter-spacing:.2em}
-.logo .star{color:var(--orange);font-size:20px;animation:spin 14s linear infinite;display:inline-block}
-@keyframes spin{to{transform:rotate(360deg)}}
-.logo b{font-size:17px;letter-spacing:.28em}
-.logo small{color:var(--tx-dim);font-size:10px;letter-spacing:.18em}
-.nav-links{display:flex;gap:4px;list-style:none}
-.nav-links a{
-  font-size:13.5px;padding:7px 13px;border-radius:3px;color:var(--tx-dim);
-  letter-spacing:.08em;transition:.25s;position:relative;font-family:var(--mono);
-}
-.nav-links a:hover{color:var(--tx)}
-.nav-links a.active{color:var(--orange)}
-.nav-links a.active::after{content:"";position:absolute;left:13px;right:13px;bottom:2px;height:2px;background:var(--orange)}
-@media(max-width:1000px){.nav-links{display:none}}
+/* ---------- hero ---------- */
+#top{position:relative;background:var(--ink);color:#fff;padding:104px 0 0;overflow:hidden}
+#top::before{content:"";position:absolute;inset:0;opacity:.5;background:
+  repeating-linear-gradient(0deg,transparent,transparent 38px,rgba(255,255,255,.028) 38px,rgba(255,255,255,.028) 39px),
+  repeating-linear-gradient(90deg,transparent,transparent 38px,rgba(255,255,255,.028) 38px,rgba(255,255,255,.028) 39px);
+  mask-image:radial-gradient(ellipse 90% 70% at 50% 20%,#000,transparent 78%)}
+#top::after{content:"";position:absolute;left:0;right:0;top:0;height:100%;background:radial-gradient(ellipse 60% 46% at 72% 32%,rgba(168,35,43,.18),transparent 70%);pointer-events:none}
+.hero-head{position:relative;z-index:2;text-align:center;margin-bottom:40px}
+.hero-head .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--amber);margin-bottom:16px}
+.hero-head h1{font-size:clamp(56px,11vw,132px);letter-spacing:.14em;line-height:.92;margin-bottom:14px}
+.hero-head .tag{font-family:var(--serif);font-style:italic;font-size:clamp(14px,2.1vw,20px);color:rgba(255,255,255,.72);letter-spacing:.02em}
+.hero-head .tag b{color:#fff;font-style:normal;font-family:var(--mono);font-size:.82em;letter-spacing:.18em;text-transform:uppercase}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.12fr .88fr;gap:26px;align-items:stretch;margin-top:38px}
+.lab{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:8px;display:flex;justify-content:space-between;gap:10px}
+.lab span:last-child{color:var(--amber)}
+.frame{position:relative;border:1px solid rgba(255,255,255,.16);background:#000;overflow:hidden}
+.frame video{width:100%;height:100%;display:block;object-fit:cover;aspect-ratio:16/9}
+.mapframe{background:var(--paper);padding:10px;border:1px solid rgba(255,255,255,.2);cursor:zoom-in;transition:.3s}
+.mapframe:hover{transform:translateY(-3px);box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.mapframe img{aspect-ratio:1023/720;object-fit:cover}
+.mapframe .cap{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:#6b5f47;text-transform:uppercase;padding:8px 2px 2px}
+.stats{position:relative;z-index:2;display:grid;grid-template-columns:repeat(5,1fr);gap:1px;margin-top:56px;background:rgba(255,255,255,.12);border-top:1px solid rgba(255,255,255,.12)}
+.stats div{background:var(--ink);padding:22px 16px;text-align:center}
+.stats b{display:block;font-family:var(--serif);font-size:clamp(24px,3.4vw,38px);color:#fff;line-height:1}
+.stats small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:8px}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
 
-/* ===== hero ===== */
-header{
-  min-height:100vh;position:relative;display:flex;flex-direction:column;justify-content:center;
-  background:
-    radial-gradient(1200px 600px at 75% -10%, rgba(74,143,224,.14), transparent 60%),
-    radial-gradient(900px 500px at 10% 110%, rgba(255,140,26,.10), transparent 60%),
-    linear-gradient(180deg,#0a1020 0%,#0c1428 55%,#0a1020 100%);
-  overflow:hidden;
-}
-.stars,.stars2{position:absolute;inset:0;pointer-events:none}
-.stars{background-image:
-  radial-gradient(1.6px 1.6px at 12% 22%,#fff,transparent),
-  radial-gradient(1.2px 1.2px at 34% 12%,#cfe4ff,transparent),
-  radial-gradient(1.8px 1.8px at 58% 30%,#fff,transparent),
-  radial-gradient(1.2px 1.2px at 72% 16%,#ffe9c9,transparent),
-  radial-gradient(1.6px 1.6px at 88% 40%,#fff,transparent),
-  radial-gradient(1.2px 1.2px at 22% 55%,#cfe4ff,transparent),
-  radial-gradient(1.6px 1.6px at 46% 62%,#fff,transparent),
-  radial-gradient(1.2px 1.2px at 66% 70%,#ffd9a8,transparent),
-  radial-gradient(1.6px 1.6px at 82% 82%,#fff,transparent),
-  radial-gradient(1.2px 1.2px at 8% 78%,#cfe4ff,transparent);
-  animation:twinkle 5s ease-in-out infinite alternate}
-.stars2{background-image:
-  radial-gradient(1px 1px at 18% 38%,#fff,transparent),
-  radial-gradient(1px 1px at 42% 20%,#ffe9c9,transparent),
-  radial-gradient(1px 1px at 62% 48%,#fff,transparent),
-  radial-gradient(1px 1px at 78% 62%,#cfe4ff,transparent),
-  radial-gradient(1px 1px at 92% 24%,#fff,transparent),
-  radial-gradient(1px 1px at 30% 86%,#fff,transparent);
-  animation:twinkle 7s ease-in-out infinite alternate-reverse}
-@keyframes twinkle{from{opacity:.35}to{opacity:.9}}
-.contours{position:absolute;inset:0;opacity:.5;pointer-events:none}
-.radar{
-  position:absolute;right:-140px;bottom:-140px;width:520px;height:520px;border-radius:50%;
-  background:conic-gradient(from 0deg,rgba(255,140,26,.22),transparent 70deg,transparent);
-  border:1px solid rgba(168,212,238,.14);
-  animation:radar 9s linear infinite;pointer-events:none;
-}
-.radar::before,.radar::after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(168,212,238,.12)}
-.radar::before{inset:17%}
-.radar::after{inset:36%}
-@keyframes radar{to{transform:rotate(360deg)}}
-.hero-grid{position:relative;z-index:2;padding:130px 0 90px}
-.eyebrow{
-  font-family:var(--mono);font-size:12px;letter-spacing:.34em;color:var(--ice);
-  display:flex;align-items:center;gap:14px;margin-bottom:26px;
-}
-.eyebrow::before{content:"";width:44px;height:1px;background:var(--ice)}
-.hero-title{
-  font-size:clamp(64px,13vw,168px);font-weight:900;line-height:.95;letter-spacing:.04em;
-  color:var(--paper);text-shadow:0 0 60px rgba(74,143,224,.25);
-  display:flex;align-items:baseline;gap:.18em;
-}
-.hero-title .accent{color:var(--orange);position:relative}
-.hero-sub{
-  margin-top:30px;max-width:640px;font-size:clamp(15.5px,1.6vw,19px);color:var(--tx-dim);
-}
-.hero-sub b{color:var(--tx)}
-.hero-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-.hero-tags span{
-  font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;color:var(--ice);
-  border:1px solid var(--line);padding:5px 12px;border-radius:2px;background:rgba(15,24,48,.6);
-}
-.hero-cta{display:flex;gap:16px;margin-top:44px;flex-wrap:wrap}
-.btn{
-  display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:14px;letter-spacing:.12em;
-  padding:14px 30px;border:1px solid var(--orange);cursor:pointer;transition:.28s;position:relative;
-}
-.btn-solid{background:var(--orange);color:#0a1020;font-weight:600}
-.btn-solid:hover{background:transparent;color:var(--orange);box-shadow:0 0 30px rgba(255,140,26,.35)}
-.btn-ghost{color:var(--paper);border-color:rgba(242,233,211,.35)}
-.btn-ghost:hover{border-color:var(--paper);background:rgba(242,233,211,.08)}
-.stamp{
-  position:absolute;top:22vh;right:6vw;z-index:3;transform:rotate(9deg);
-  border:3px solid var(--red);color:var(--red);font-family:var(--mono);font-weight:600;
-  padding:8px 18px;font-size:13px;letter-spacing:.3em;border-radius:4px;opacity:.75;
-  box-shadow:inset 0 0 12px rgba(214,58,47,.25);
-}
-.hero-quote{
-  position:absolute;bottom:8vh;left:6vw;z-index:3;font-family:var(--hand);font-size:clamp(20px,2.4vw,30px);
-  color:rgba(242,233,211,.55);transform:rotate(-2deg);max-width:420px;line-height:1.5;
-}
-@media(max-width:900px){.stamp{top:14vh;right:4vw}.hero-quote{display:none}}
 /* ticker */
-.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(15,24,48,.5);overflow:hidden;position:relative;z-index:2}
-.ticker-track{display:flex;gap:0;width:max-content;animation:tick 36s linear infinite}
-.ticker-track span{
-  font-family:var(--mono);font-size:12px;letter-spacing:.22em;color:var(--tx-dim);
-  padding:12px 28px;white-space:nowrap;border-right:1px solid var(--line);
-}
-.ticker-track span b{color:var(--orange);margin-right:10px}
-@keyframes tick{to{transform:translateX(-50%)}}
+.ticker{background:var(--red);color:#fff;overflow:hidden;padding:9px 0;border-top:1px solid rgba(0,0,0,.2)}
+.ticker span{display:inline-block;white-space:nowrap;font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;animation:slide 46s linear infinite}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-/* ===== stats band ===== */
-.stats{background:linear-gradient(180deg,#0a1020,#0d1526);border-bottom:1px solid var(--line);position:relative;z-index:2}
-.stats-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--line)}
-.stat{background:#0d1526;padding:34px 12px;text-align:center;transition:.3s}
-.stat:hover{background:#131f3d}
-.stat b{font-family:var(--mono);font-size:clamp(26px,3vw,40px);color:var(--orange);display:block;line-height:1.1}
-.stat span{font-size:12.5px;color:var(--tx-dim);letter-spacing:.12em;display:block;margin-top:8px}
-@media(max-width:900px){.stats-grid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:560px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
+/* ---------- generic section ---------- */
+section{padding:96px 0}
+.shead{margin-bottom:44px;max-width:820px}
+.shead h2{font-size:clamp(30px,4.4vw,50px);margin:12px 0 14px}
+.shead p{color:var(--mut);font-size:16.5px;margin:0}
+.snum{font-family:var(--mono);font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--red)}
 
-/* ===== section frame ===== */
-section{padding:110px 0;position:relative}
-.sec-head{margin-bottom:56px}
-.sec-no{
-  font-family:var(--mono);font-size:13px;color:var(--orange);letter-spacing:.3em;
-  display:flex;align-items:center;gap:14px;margin-bottom:16px;
-}
-.sec-no::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
-h2{font-size:clamp(30px,4vw,46px);font-weight:900;color:var(--paper);letter-spacing:.04em}
-.sec-lead{margin-top:16px;color:var(--tx-dim);max-width:720px;font-size:15.5px}
-.sec-lead b{color:var(--tx)}
+/* ---------- newspaper ---------- */
+#dispatch{background:var(--paper3);border-top:1px solid #cfc3a6;border-bottom:1px solid #cfc3a6;padding:88px 0}
+.np{background:#fbf7ec;border:1px solid #c9bda1;box-shadow:0 26px 60px rgba(40,32,20,.13);padding:34px 34px 40px;max-width:1080px;margin:0 auto}
+.np .mast{border-bottom:3px double #2b2317;padding-bottom:10px;margin-bottom:6px;display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.np .mast h3{font-size:clamp(20px,3.4vw,34px);letter-spacing:.1em;text-transform:uppercase}
+.np .mast .meta{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#7d7059;text-align:right}
+.np .band{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#7d7059;border-bottom:1px solid #c9bda1;padding-bottom:8px;margin-bottom:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.np .lede{font-family:var(--serif);font-size:clamp(24px,4.2vw,40px);line-height:1.1;text-align:center;margin:0 0 6px;letter-spacing:.02em}
+.np .sublede{text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#7d7059;margin-bottom:24px}
+.np .cols{column-count:3;column-gap:26px;column-rule:1px solid #cfc3a6;font-family:var(--serif);font-size:13.6px;line-height:1.62;color:#241d13;text-align:justify;hyphens:auto}
+.np .cols h4{font-size:15px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 6px;color:#1a1410;border-bottom:1px solid #c9bda1;padding-bottom:5px}
+.np .cols h4:not(:first-child){margin-top:16px}
+.np .cols p{margin:0 0 10px}
+.np .cols .drop::first-letter{font-size:2.9em;line-height:.82;float:left;padding:2px 6px 0 0;font-weight:700}
+.np .note{margin-top:22px;border-top:1px solid #c9bda1;padding-top:12px;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:#7d7059;line-height:1.7}
+@media(max-width:820px){.np .cols{column-count:1}.np{padding:22px}}
+
+/* ---------- world ---------- */
+#world{background:var(--paper)}
+.world-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:start}
+.wcard{background:var(--paper2);border:1px solid #d7cbb0;padding:12px;cursor:zoom-in;transition:.28s;box-shadow:0 12px 34px rgba(50,42,26,.1)}
+.wcard:hover{transform:translateY(-4px);box-shadow:0 22px 50px rgba(50,42,26,.18)}
+.wcard .cap{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#7d7059;padding:9px 2px 2px}
+.nations{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.nat{background:var(--paper2);border:1px solid #d7cbb0;border-left:3px solid #d7cbb0;padding:14px 16px;transition:.22s}
+.nat:hover{border-left-color:var(--red);transform:translateX(3px)}
+.nat.f{background:#fdf8ec;border-left-color:var(--amber);box-shadow:0 6px 18px rgba(192,130,47,.16)}
+.nat.d{background:#fdf8ec;border-left-color:var(--teal);box-shadow:0 6px 18px rgba(47,111,107,.14)}
+.nat h4{font-size:15px;letter-spacing:.02em;margin-bottom:3px}
+.nat .en{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-bottom:7px}
+.nat p{margin:0;font-size:12.8px;color:#4a5361;line-height:1.5}
+.nat .owner{display:inline-block;font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;padding:2px 7px;margin-top:8px;color:#fff}
+.nat.f .owner{background:var(--amber)}
+.nat.d .owner{background:var(--teal)}
+@media(max-width:900px){.world-grid{grid-template-columns:1fr}.nations{grid-template-columns:1fr}}
+
+/* ---------- sectors ---------- */
+#sectors{background:var(--ink);color:#e9eef4}
+#sectors .shead p{color:rgba(233,238,244,.6)}
+#sectors .snum{color:var(--amber)}
+.sector{border-top:1px solid rgba(255,255,255,.14);padding:46px 0;display:grid;grid-template-columns:260px 1fr;gap:40px}
+.sector:first-of-type{border-top:none;padding-top:0}
+.side{position:relative}
+.side .num{font-family:var(--mono);font-size:11px;letter-spacing:.24em;color:var(--amber);margin-bottom:12px}
+.side .logo{background:var(--paper);padding:9px;cursor:zoom-in;transition:.25s;box-shadow:0 12px 28px rgba(0,0,0,.4)}
+.side .logo:hover{transform:scale(1.02)}
+.side .logo img{aspect-ratio:4/3;object-fit:cover}
+.side h3{font-size:clamp(20px,2.6vw,27px);margin:16px 0 8px;letter-spacing:.02em}
+.side .desc{font-size:13.4px;color:rgba(233,238,244,.62);line-height:1.6;margin:0}
+.side .count{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(233,238,244,.4);margin-top:12px}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;align-content:start}
+.gal figure{margin:0;position:relative;overflow:hidden;background:#000;cursor:zoom-in;aspect-ratio:4/3}
+.gal figure.wide{grid-column:span 2;aspect-ratio:16/9}
+.gal figure img{width:100%;height:100%;object-fit:cover;transition:.45s}
+.gal figure:hover img{transform:scale(1.06)}
+.gal figure::after{content:attr(data-n);position:absolute;bottom:0;left:0;font-family:var(--mono);font-size:9px;letter-spacing:.1em;color:#fff;background:rgba(0,0,0,.6);padding:2px 6px;opacity:0;transition:.25s}
+.gal figure:hover::after{opacity:1}
+@media(max-width:1000px){.sector{grid-template-columns:1fr;gap:22px}.gal{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.gal{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- founders ---------- */
+#founders{background:var(--paper2);border-top:1px solid #d7cbb0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-bottom:44px}
+.fcard{background:var(--ink);color:#fff;padding:26px 28px;position:relative;overflow:hidden}
+.fcard::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 100% 0,var(--amb,var(--amber)),transparent 62%);opacity:.2}
+.fcard .role{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.7}
+.fcard h3{font-size:34px;letter-spacing:.08em;margin:6px 0 4px}
+.fcard .nat2{font-family:var(--serif);font-style:italic;font-size:13px;opacity:.8}
+.fcard .q{font-family:var(--serif);font-size:14.6px;line-height:1.62;margin:16px 0 0;padding-left:14px;border-left:2px solid rgba(255,255,255,.28);color:rgba(255,255,255,.86)}
+.fcard.d{--amb:var(--teal)}
+.story{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:start}
+.story p{color:#39424f;font-size:15.4px;line-height:1.78;margin:0 0 16px}
+.story p b{color:var(--txt)}
+.pull{font-family:var(--serif);font-size:clamp(19px,2.6vw,25px);line-height:1.4;color:var(--red);border-top:2px solid var(--red);border-bottom:1px solid #d7cbb0;padding:18px 0;margin:24px 0;font-style:italic}
+.foundergal{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.foundergal figure{margin:0;cursor:zoom-in;overflow:hidden;background:#000;aspect-ratio:1/1}
+.foundergal figure img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.foundergal figure:hover img{transform:scale(1.05)}
+.goodbye{margin-top:38px;background:var(--ink);padding:10px;cursor:zoom-in;position:relative}
+.goodbye img{width:100%}
+.goodbye .cap{position:absolute;left:10px;right:10px;bottom:10px;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:26px 16px 12px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#fff}
+@media(max-width:900px){.two,.story{grid-template-columns:1fr}}
+
+/* ---------- evolution ---------- */
+#evolution{background:var(--ink2);color:#e9eef4}
+#evolution .shead p{color:rgba(233,238,244,.6)}
+#evolution .snum{color:var(--amber)}
+.track{margin-bottom:56px}
+.track .th{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
+.track .th .n{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--amber)}
+.track .th h3{font-size:clamp(19px,2.5vw,25px)}
+.track .tl{font-size:14px;color:rgba(233,238,244,.62);max-width:760px;margin:0 0 22px}
+.ladder{display:flex;gap:1px;overflow-x:auto;padding-bottom:8px;scrollbar-width:thin}
+.rung{flex:1 0 128px;background:rgba(255,255,255,.055);border-top:2px solid var(--red);padding:12px 12px 14px;transition:.25s;cursor:zoom-in}
+.rung:hover{background:rgba(255,255,255,.11);transform:translateY(-3px)}
+.rung .y{font-family:var(--mono);font-size:9px;letter-spacing:.14em;color:rgba(233,238,244,.45);margin-bottom:7px}
+.rung img{aspect-ratio:1/1;object-fit:cover;margin-bottom:9px;background:#000}
+.rung h5{font-family:var(--sans);font-size:12.6px;font-weight:600;margin:0 0 4px;letter-spacing:.01em}
+.rung p{font-family:var(--sans);font-size:11.2px;margin:0;color:rgba(233,238,244,.58);line-height:1.45}
+.ascent{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(255,255,255,.14);margin-top:8px}
+.step{background:var(--ink2);padding:24px 18px;position:relative}
+.step .bar{height:3px;background:var(--red);margin-bottom:14px;width:var(--w,20%)}
+.step .k{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:6px}
+.step h5{font-family:var(--serif);font-size:17px;margin:0 0 6px}
+.step p{font-family:var(--sans);font-size:12.4px;margin:0;color:rgba(233,238,244,.6);line-height:1.5}
+@media(max-width:900px){.ascent{grid-template-columns:1fr}}
+
+/* ---------- digital ---------- */
+#digital{background:var(--paper)}
+.dig{display:grid;grid-template-columns:.92fr 1.08fr;gap:40px;align-items:start}
+.dig p{color:#39424f;font-size:15.4px;line-height:1.78;margin:0 0 15px}
+.dual{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:22px 0}
+.dual div{background:var(--paper2);border:1px solid #d7cbb0;padding:18px}
+.dual .n{font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--red);margin-bottom:7px}
+.dual h5{font-family:var(--serif);font-size:18px;margin:0 0 6px}
+.dual p{font-size:13px;margin:0;color:#4a5361;line-height:1.55}
+.diggal{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.diggal figure{margin:0;cursor:zoom-in;overflow:hidden;background:#000;aspect-ratio:4/3}
+.diggal figure img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.diggal figure:hover img{transform:scale(1.05)}
+.diggal figure.wide{grid-column:span 2;aspect-ratio:16/10}
+@media(max-width:900px){.dig{grid-template-columns:1fr}.dual{grid-template-columns:1fr}}
+
+/* ---------- community ---------- */
+#community{background:var(--ink3);color:#e9eef4}
+#community .shead p{color:rgba(233,238,244,.6)}
+#community .snum{color:var(--amber)}
+.charter{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.14);margin-bottom:52px}
+.pr{background:var(--ink2);padding:26px 22px}
+.pr .n{font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--amber);margin-bottom:10px}
+.pr h4{font-family:var(--serif);font-size:17px;margin:0 0 8px;letter-spacing:.01em}
+.pr p{font-family:var(--sans);font-size:13px;margin:0;color:rgba(233,238,244,.62);line-height:1.6}
+.join2{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.join2 h3{font-size:22px;margin-bottom:14px}
+.ways{list-style:none;padding:0;margin:0}
+.ways li{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.ways li:first-child{padding-top:0}
+.ways b{display:block;font-family:var(--sans);font-size:14.4px;color:#fff;margin-bottom:4px}
+.ways span{font-family:var(--sans);font-size:12.8px;color:rgba(233,238,244,.6);line-height:1.55}
+.road{list-style:none;padding:0;margin:0}
+.road li{display:grid;grid-template-columns:74px 1fr;gap:14px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:13px}
+.road .st{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;align-self:center}
+.road .done{color:#5fb08a}.road .now{color:var(--amber)}.road .next{color:rgba(233,238,244,.45)}
+@media(max-width:900px){.charter{grid-template-columns:1fr}.join2{grid-template-columns:1fr}}
+
+/* ---------- archive ---------- */
+#archive{background:var(--paper3);border-top:1px solid #cfc3a6}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.filters button{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border:1px solid #bfb191;background:transparent;color:#4a4335;cursor:pointer;transition:.2s}
+.filters button:hover{background:#fbf7ec}
+.filters button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.arch{display:grid;grid-template-columns:repeat(6,1fr);gap:7px}
+.arch figure{margin:0;position:relative;overflow:hidden;background:#000;cursor:zoom-in;aspect-ratio:1/1}
+.arch figure img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.arch figure:hover img{transform:scale(1.07)}
+@media(max-width:900px){.arch{grid-template-columns:repeat(3,1fr)}}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:rgba(255,255,255,.66);padding:64px 0 52px;text-align:center}
+footer h3{font-size:clamp(24px,4vw,40px);color:#fff;letter-spacing:.06em;margin-bottom:12px}
+footer p{margin:0 auto 10px;max-width:620px;font-size:13.6px;line-height:1.7}
+footer .line{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.36);margin-top:26px}
+footer a{color:var(--amber)}
+
+/* ---------- lightbox ---------- */
+#lb{position:fixed;inset:0;z-index:200;background:rgba(6,9,13,.94);display:none;align-items:center;justify-content:center;padding:40px 20px}
+#lb.on{display:flex}
+#lb img{max-width:min(1180px,92vw);max-height:78vh;width:auto;object-fit:contain;box-shadow:0 40px 90px rgba(0,0,0,.7)}
+#lb .cap{position:fixed;left:0;right:0;bottom:0;padding:16px 24px 22px;background:linear-gradient(transparent,rgba(0,0,0,.9) 40%);color:#fff;text-align:center;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;line-height:1.6}
+#lb .x,#lb .p,#lb .n{position:fixed;top:22px;font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);width:44px;height:44px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.2s;z-index:2}
+#lb .x{right:22px}#lb .p{left:22px}#lb .n{left:78px}
+#lb .x:hover,#lb .p:hover,#lb .n:hover{background:var(--red);border-color:var(--red)}
 
 /* reveal */
-.rv{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.2,.7,.3,1),transform .8s cubic-bezier(.2,.7,.3,1)}
-.rv.on{opacity:1;transform:none}
-.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}.rv.d4{transition-delay:.4s}
-
-/* ===== worldview ===== */
-.world-split{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:start}
-@media(max-width:960px){.world-split{grid-template-columns:1fr}}
-.doc-quote{
-  background:var(--paper);color:#2a2313;padding:34px 36px;position:relative;
-  box-shadow:0 18px 50px rgba(0,0,0,.45);transform:rotate(-.6deg);
-  font-size:16.5px;line-height:2;
-}
-.doc-quote::before{
-  content:"RUSKI 手稿 · 2024";position:absolute;top:-14px;left:26px;background:var(--red);color:#fff;
-  font-family:var(--mono);font-size:11px;letter-spacing:.2em;padding:4px 12px;transform:rotate(-2deg);
-}
-.doc-quote i{font-family:var(--hand);font-style:normal;font-size:22px;color:#6b4d1e}
-.doc-quote .src{display:block;margin-top:14px;font-family:var(--mono);font-size:11px;color:#8a7346;letter-spacing:.12em}
-.tape{position:absolute;width:110px;height:30px;background:rgba(232,179,75,.35);top:-14px;right:34px;transform:rotate(4deg);backdrop-filter:blur(1px)}
-.world-points{display:grid;gap:18px;margin-top:34px}
-.world-points .pt{display:flex;gap:16px;align-items:flex-start}
-.world-points .pt .ico{
-  flex:none;width:44px;height:44px;border:1px solid var(--line);display:grid;place-items:center;
-  font-family:var(--mono);color:var(--orange);font-size:15px;background:rgba(15,24,48,.7);border-radius:2px;
-}
-.world-points .pt h4{color:var(--paper);font-size:16px;margin-bottom:4px}
-.world-points .pt p{color:var(--tx-dim);font-size:14px}
-/* superpower duel */
-.duel{
-  border:1px solid var(--line);background:linear-gradient(180deg,#0e1730,#0b1226);
-  padding:30px;position:sticky;top:96px;
-}
-.duel h3{font-family:var(--mono);font-size:13px;letter-spacing:.26em;color:var(--ice);margin-bottom:22px;text-align:center}
-.duel-row{display:grid;grid-template-columns:1fr 44px 1fr;gap:8px;align-items:center;margin-bottom:13px;font-size:13.5px}
-.duel-row .vs{text-align:center;color:var(--red);font-family:var(--mono);font-weight:600}
-.duel-row .c1{color:var(--ice);text-align:right}
-.duel-row .c2{color:var(--gold)}
-.duel-cap{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);font-size:12.5px;color:var(--tx-dim)}
-.finding{
-  margin-top:54px;border:1px solid rgba(214,58,47,.4);background:linear-gradient(90deg,rgba(214,58,47,.08),transparent 65%);
-  padding:34px 38px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;
-}
-.finding .badge{
-  flex:none;width:92px;height:92px;border:2px solid var(--red);border-radius:50%;display:grid;place-items:center;
-  font-family:var(--mono);color:var(--red);font-size:11px;letter-spacing:.1em;text-align:center;line-height:1.5;
-  transform:rotate(-8deg);font-weight:600;
-}
-.finding h4{color:var(--paper);font-size:19px;margin-bottom:8px}
-.finding p{color:var(--tx-dim);font-size:14.5px;max-width:840px}
-.finding b{color:var(--orange)}
-@media(max-width:700px){.finding{grid-template-columns:1fr;padding:26px}}
-
-/* ===== timeline ===== */
-#history{background:linear-gradient(180deg,#0a1020,#0c1526 20%,#0c1526 80%,#0a1020)}
-.tl{position:relative;max-width:980px;margin:0 auto;padding:10px 0}
-.tl::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(180deg,transparent,var(--line) 8%,var(--line) 92%,transparent)}
-.tl-item{position:relative;width:50%;padding:0 52px 64px}
-.tl-item:nth-child(odd){left:0;text-align:right}
-.tl-item:nth-child(even){left:50%;text-align:left}
-.tl-item .dot{
-  position:absolute;top:6px;width:16px;height:16px;border-radius:50%;background:var(--ink);
-  border:3px solid var(--orange);z-index:2;box-shadow:0 0 18px rgba(255,140,26,.5);
-}
-.tl-item:nth-child(odd) .dot{right:-8px}
-.tl-item:nth-child(even) .dot{left:-8px}
-.tl-year{font-family:var(--mono);font-size:26px;color:var(--orange);font-weight:600;letter-spacing:.06em}
-.tl-tag{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--ice);border:1px solid var(--line);padding:3px 10px;margin:8px 0 12px}
-.tl-item h3{font-size:21px;color:var(--paper);margin-bottom:10px}
-.tl-item p{color:var(--tx-dim);font-size:14px}
-.tl-item p b{color:var(--tx)}
-@media(max-width:760px){
-  .tl::before{left:10px}
-  .tl-item{width:100%;left:0!important;text-align:left!important;padding:0 0 52px 44px}
-  .tl-item .dot{left:2px!important;right:auto!important}
-}
-/* fictional chronicle */
-.chron{
-  margin-top:80px;border:1px solid var(--line);background:rgba(15,24,48,.55);padding:44px 46px;position:relative;overflow:hidden;
-}
-.chron::before{content:"FICTIONAL TIMELINE — 架空编年史";position:absolute;top:0;left:0;right:0;padding:9px 20px;font-family:var(--mono);font-size:10.5px;letter-spacing:.3em;color:var(--gold);background:rgba(232,179,75,.08);border-bottom:1px solid var(--line)}
-.chron-inner{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;margin-top:26px}
-.chron-cell{padding:20px 18px;border-left:1px dashed var(--line);position:relative;transition:.3s}
-.chron-cell:hover{background:rgba(255,140,26,.05)}
-.chron-cell b{font-family:var(--mono);color:var(--gold);font-size:16px;display:block;margin-bottom:6px}
-.chron-cell span{font-size:13px;color:var(--tx-dim);line-height:1.7;display:block}
-.chron-note{margin-top:22px;font-family:var(--hand);font-size:20px;color:rgba(242,233,211,.5)}
-
-/* ===== gallery ===== */
-.gal-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
-.gal-item{
-  position:relative;cursor:zoom-in;overflow:hidden;background:var(--paper);
-  border:6px solid var(--paper);box-shadow:0 16px 44px rgba(0,0,0,.5);transition:transform .35s,box-shadow .35s;
-}
-.gal-item:hover{transform:translateY(-6px) rotate(0deg)!important;box-shadow:0 26px 60px rgba(0,0,0,.65);z-index:3}
-.gal-item img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4;filter:sepia(.12) contrast(1.02);transition:.5s}
-.gal-item:hover img{filter:sepia(0) contrast(1.05)}
-.gal-cap{
-  position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(20,15,5,.88));
-  padding:36px 16px 14px;color:var(--paper);font-size:13px;transform:translateY(0);transition:.35s;
-}
-.gal-cap b{display:block;font-size:14.5px;margin-bottom:2px}
-.gal-cap span{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;color:var(--gold)}
-.g7{grid-column:span 7}.g5{grid-column:span 5}.g4{grid-column:span 4}.g6{grid-column:span 6}.g8{grid-column:span 8}
-.gal-item.land img{aspect-ratio:4/3}
-@media(max-width:860px){.g7,.g5,.g4,.g6,.g8{grid-column:span 12}}
-.works-table{margin-top:56px;overflow-x:auto}
-table.ruski{width:100%;border-collapse:collapse;font-size:14px;min-width:720px}
-table.ruski th{
-  font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--ice);text-align:left;
-  padding:14px 18px;border-bottom:2px solid var(--orange);white-space:nowrap;
-}
-table.ruski td{padding:15px 18px;border-bottom:1px solid var(--line);color:var(--tx-dim);vertical-align:top}
-table.ruski td b{color:var(--paper)}
-table.ruski tr:hover td{background:rgba(74,143,224,.04)}
-.pill{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;padding:3px 10px;border-radius:2px;white-space:nowrap}
-.pill.done{color:#7ed491;border:1px solid rgba(126,212,145,.4)}
-.pill.prog{color:var(--orange);border:1px solid rgba(255,140,26,.4)}
-.pill.open{color:var(--ice);border:1px solid rgba(168,212,238,.4)}
-
-/* ===== map ===== */
-#atlas{background:radial-gradient(1000px 500px at 50% 0%,rgba(74,143,224,.07),transparent 60%)}
-.map-wrap{display:grid;grid-template-columns:1.5fr 1fr;gap:34px;align-items:stretch}
-@media(max-width:980px){.map-wrap{grid-template-columns:1fr}}
-.map-box{
-  border:1px solid var(--line);background:
-    linear-gradient(rgba(74,143,224,.045) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(74,143,224,.045) 1px,transparent 1px),
-    #0b1226;
-  background-size:44px 44px,44px 44px,auto;position:relative;padding:18px;
-}
-.map-box svg{width:100%;height:auto;display:block}
-.map-note{
-  position:absolute;bottom:10px;right:16px;font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--tx-dim);opacity:.8;
-}
-.compass{position:absolute;top:26px;right:30px;opacity:.85}
-.land{cursor:pointer}
-.land path{
-  fill:rgba(74,143,224,.10);stroke:rgba(168,212,238,.5);stroke-width:1.4;transition:.3s;
-}
-.land text{
-  font-family:var(--mono);font-size:12.5px;fill:var(--tx-dim);letter-spacing:.08em;pointer-events:none;transition:.3s;
-}
-.land:hover path,.land.sel path{fill:rgba(255,140,26,.22);stroke:var(--orange);filter:drop-shadow(0 0 10px rgba(255,140,26,.35))}
-.land:hover text,.land.sel text{fill:var(--orange);font-weight:600}
-.land.founder path{fill:rgba(232,179,75,.14);stroke:rgba(232,179,75,.65)}
-.land.founder:hover path,.land.founder.sel path{fill:rgba(255,140,26,.25);stroke:var(--orange)}
-.ocean-lbl{font-family:var(--mono);font-size:11px;fill:rgba(168,212,238,.4);letter-spacing:.3em}
-.map-panel{
-  border:1px solid var(--line);background:linear-gradient(180deg,#101b38,#0c1328);padding:30px;display:flex;flex-direction:column;
-}
-.map-panel .mp-tag{font-family:var(--mono);font-size:11px;letter-spacing:.26em;color:var(--orange);margin-bottom:10px}
-.map-panel h3{font-size:24px;color:var(--paper);margin-bottom:4px}
-.map-panel .mp-en{font-family:var(--mono);font-size:12.5px;color:var(--ice);margin-bottom:18px;letter-spacing:.08em}
-.map-panel dl{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:13.5px}
-.map-panel dt{color:var(--tx-dim);font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;padding-top:2px}
-.map-panel dd{color:var(--tx)}
-.map-panel .mp-desc{margin-top:18px;padding-top:18px;border-top:1px dashed var(--line);color:var(--tx-dim);font-size:13.5px;line-height:1.9}
-.map-panel .mp-cta{margin-top:auto;padding-top:22px}
-.map-panel .mp-cta a{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;color:var(--orange);border-bottom:1px solid var(--orange);padding-bottom:3px}
-.nations-table{margin-top:48px}
-.nations-table table.ruski td .en{font-family:var(--mono);font-size:11px;color:var(--ice);display:block;margin-top:2px;letter-spacing:.06em}
-
-/* ===== join ===== */
-#join{background:linear-gradient(180deg,#0a1020,#0d1526)}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:st}
-@media(max-width:960px){.steps{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.steps{grid-template-columns:1fr}}
-.step{border:1px solid var(--line);padding:34px 26px;position:relative;margin-right:-1px;counter-increment:st;transition:.3s;background:rgba(15,24,48,.4)}
-.step:hover{background:rgba(255,140,26,.05);border-color:rgba(255,140,26,.4);z-index:2}
-.step::before{
-  content:"0" counter(st);font-family:var(--mono);font-size:44px;color:rgba(74,143,224,.22);font-weight:600;
-  display:block;line-height:1;margin-bottom:14px;
-}
-.step h4{color:var(--paper);font-size:17px;margin-bottom:8px}
-.step p{color:var(--tx-dim);font-size:13.5px}
-.step .k{font-family:var(--mono);font-size:11px;color:var(--gold);letter-spacing:.16em;display:block;margin-top:12px}
-.roles{margin-top:60px}
-.roles h3,.lab-title,.apply-title{font-family:var(--mono);font-size:13px;letter-spacing:.28em;color:var(--ice);margin-bottom:22px;display:flex;align-items:center;gap:14px}
-.roles h3::after,.lab-title::after,.apply-title::after{content:"";flex:1;height:1px;background:var(--line)}
-/* flag lab */
-.flag-lab{
-  margin-top:60px;border:1px solid var(--line);background:rgba(15,24,48,.55);padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:44px;
-}
-@media(max-width:860px){.flag-lab{grid-template-columns:1fr;padding:26px}}
-.flag-controls{display:grid;gap:18px;align-content:start}
-.fc label{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--tx-dim);display:block;margin-bottom:8px}
-.fc input[type=text],.fc select{
-  width:100%;background:#0a1122;border:1px solid var(--line);color:var(--paper);padding:11px 14px;
-  font-family:var(--mono);font-size:14px;outline:none;transition:.25s;border-radius:2px;
-}
-.fc input[type=text]:focus,.fc select:focus{border-color:var(--orange)}
-.color-row{display:flex;gap:12px}
-.color-row .sw{flex:1}
-.color-row input[type=color]{
-  width:100%;height:46px;border:1px solid var(--line);background:#0a1122;cursor:pointer;padding:4px;border-radius:2px;
-}
-.flag-preview{display:grid;place-items:center;gap:18px}
-#flagCanvas{
-  width:100%;max-width:420px;border:1px solid rgba(168,212,238,.3);box-shadow:0 18px 50px rgba(0,0,0,.55);
-  background:#111;animation:flagwave 5s ease-in-out infinite;transform-style:preserve-3d;
-}
-@keyframes flagwave{0%,100%{transform:perspective(800px) rotateY(-4deg) rotateX(1deg)}50%{transform:perspective(800px) rotateY(4deg) rotateX(-1deg)}}
-.flag-name{text-align:center;font-family:var(--mono);font-size:13px;letter-spacing:.2em;color:var(--gold)}
-/* apply */
-.apply-box{
-  margin-top:60px;border:1px solid var(--line);background:rgba(15,24,48,.55);padding:40px;
-}
-.apply-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 34px}
-@media(max-width:860px){.apply-grid{grid-template-columns:1fr}.apply-box{padding:26px}}
-#applyOut{
-  margin-top:26px;background:var(--paper);color:#2a2313;padding:28px 30px;font-size:14px;line-height:2;
-  display:none;box-shadow:0 18px 44px rgba(0,0,0,.4);position:relative;white-space:pre-wrap;font-family:var(--mono);font-size:12.5px;
-}
-#applyOut.show{display:block;animation:fadein .5s}
-@keyframes fadein{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-.apply-actions{margin-top:18px;display:flex;gap:14px;flex-wrap:wrap}
-
-/* ===== charter ===== */
-#charter{background:radial-gradient(900px 500px at 85% 20%,rgba(232,179,75,.06),transparent 60%)}
-.charter-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
-.ch-card{
-  border:1px solid var(--line);padding:34px 30px;background:linear-gradient(180deg,#0f1830,#0b1226);
-  position:relative;overflow:hidden;transition:.35s;
-}
-.ch-card::before{content:attr(data-no);position:absolute;top:14px;right:18px;font-family:var(--mono);font-size:30px;color:rgba(74,143,224,.15);font-weight:600}
-.ch-card:hover{border-color:rgba(255,140,26,.45);transform:translateY(-5px)}
-.ch-card .ch-ico{font-size:26px;margin-bottom:16px;display:block}
-.ch-card h4{color:var(--paper);font-size:18px;margin-bottom:6px}
-.ch-card .en{font-family:var(--mono);font-size:11px;color:var(--gold);letter-spacing:.2em;display:block;margin-bottom:14px}
-.ch-card p{color:var(--tx-dim);font-size:13.8px}
-.founder-quotes{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:56px}
-@media(max-width:860px){.founder-quotes{grid-template-columns:1fr}}
-.fq{
-  background:var(--paper);color:#33291a;padding:36px 34px 30px;position:relative;box-shadow:0 20px 54px rgba(0,0,0,.5);
-  font-size:15.5px;line-height:2.05;
-}
-.fq:nth-child(1){transform:rotate(-.8deg)}
-.fq:nth-child(2){transform:rotate(.7deg)}
-.fq i{font-family:var(--hand);font-style:normal;font-size:23px;line-height:1.6;display:block;color:#241c0e}
-.fq .who{display:flex;align-items:center;gap:12px;margin-top:20px;font-family:var(--mono);font-size:12px;letter-spacing:.16em;color:#8a7346}
-.fq .who::before{content:"—";color:var(--red)}
-.fq .role{color:#a5854a}
-.gov{margin-top:60px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-@media(max-width:860px){.gov{grid-template-columns:1fr}}
-.gov-card{border:1px dashed rgba(168,212,238,.3);padding:28px;transition:.3s}
-.gov-card:hover{border-color:var(--orange);background:rgba(255,140,26,.04)}
-.gov-card h5{font-family:var(--mono);font-size:12.5px;letter-spacing:.2em;color:var(--ice);margin-bottom:12px}
-.gov-card p{font-size:13.5px;color:var(--tx-dim)}
-
-/* ===== roadmap ===== */
-.roadmap-table td b.y{font-family:var(--mono);color:var(--orange);font-size:16px}
-/* footer */
-footer{border-top:1px solid var(--line);background:#080d1a;padding:64px 0 40px}
-.foot-grid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;align-items:flex-start}
-.foot-logo{font-family:var(--mono);font-weight:600;font-size:20px;letter-spacing:.28em;color:var(--paper)}
-.foot-logo span{color:var(--orange)}
-.foot-meta{font-size:12.5px;color:var(--tx-dim);margin-top:12px;line-height:2}
-.foot-right{font-family:var(--mono);font-size:11.5px;color:var(--tx-dim);text-align:right;letter-spacing:.12em;line-height:2.2}
-.foot-right b{color:var(--ice)}
-.copy{margin-top:44px;padding-top:22px;border-top:1px solid rgba(168,212,238,.08);display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:#55627e;letter-spacing:.14em;flex-wrap:wrap;gap:10px}
-
-/* ===== lightbox ===== */
-.lb{position:fixed;inset:0;background:rgba(6,10,20,.94);z-index:9999;display:none;align-items:center;justify-content:center;flex-direction:column;padding:4vh 4vw}
-.lb.open{display:flex;animation:fadein .3s}
-.lb img{max-height:78vh;max-width:92vw;border:6px solid var(--paper);box-shadow:0 30px 90px rgba(0,0,0,.8)}
-.lb-cap{color:var(--paper);margin-top:18px;font-size:14px;text-align:center}
-.lb-cap span{display:block;font-family:var(--mono);font-size:11px;color:var(--gold);letter-spacing:.2em;margin-top:4px}
-.lb-btn{
-  position:absolute;top:50%;transform:translateY(-50%);background:none;border:1px solid var(--line);color:var(--paper);
-  font-size:26px;width:54px;height:54px;cursor:pointer;transition:.25s;font-family:var(--mono);
-}
-.lb-btn:hover{border-color:var(--orange);color:var(--orange)}
-.lb-prev{left:3vw}.lb-next{right:3vw}
-.lb-close{position:absolute;top:26px;right:32px;background:none;border:none;color:var(--tx-dim);font-size:30px;cursor:pointer;transition:.25s}
-.lb-close:hover{color:var(--orange);transform:rotate(90deg)}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.ticker span{animation:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
 <nav id="nav">
-  <div class="container nav-inner">
-    <a class="logo" href="#top">
-      <span class="star">★</span>
-      <b>RUSKI</b><small>CORPORATION</small>
-    </a>
-    <ul class="nav-links">
-      <li><a href="#world">世界观</a></li>
-      <li><a href="#history">发展历史</a></li>
-      <li><a href="#gallery">世界档案</a></li>
-      <li><a href="#atlas">国家图鉴</a></li>
-      <li><a href="#join">加入共建</a></li>
-      <li><a href="#charter">社区宪章</a></li>
-      <li><a href="#roadmap">路线图</a></li>
+  <div class="inner">
+    <div class="brand">RUS<span>K</span>I</div>
+    <ul>
+      <li><a href="#world">The World</a></li>
+      <li><a href="#sectors">Sectors</a></li>
+      <li><a href="#founders">Founders</a></li>
+      <li><a href="#evolution">Evolution</a></li>
+      <li><a href="#digital">Digitalisation</a></li>
+      <li><a href="#archive">Archive</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- ================= HERO ================= -->
+<!-- ============ HERO ============ -->
 <header id="top">
-  <div class="stars"></div><div class="stars2"></div>
-  <svg class="contours" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice">
-    <defs>
-      <pattern id="topo" width="260" height="200" patternUnits="userSpaceOnUse">
-        <path d="M0 160 Q 65 60 130 130 T 260 110" fill="none" stroke="rgba(74,143,224,.10)" stroke-width="1"/>
-        <path d="M0 190 Q 70 100 140 160 T 260 140" fill="none" stroke="rgba(74,143,224,.08)" stroke-width="1"/>
-        <path d="M0 120 Q 60 30 120 90 T 240 70" fill="none" stroke="rgba(74,143,224,.07)" stroke-width="1"/>
-      </pattern>
-    </defs>
-    <rect width="1400" height="900" fill="url(#topo)"/>
-  </svg>
-  <div class="radar"></div>
-  <div class="stamp">DECLASSIFIED · 已解密档案</div>
-  <div class="container hero-grid">
-    <div class="eyebrow rv">RUSKI CORPORATION · EST. 2022 · Sci‑Fi Geopolitical Universe</div>
-    <h1 class="hero-title rv d1">RUSKI<span class="accent">.</span></h1>
-    <p class="hero-sub rv d2">
-      一个从<b>课桌与草稿纸</b>上生长出来的世界。四位少年，四年笔耕，数万字手稿，
-      手绘六大大陆、三大洋与一个没有核武器的平行星球 —— 现在，它向所有玩家敞开大门。
-    </p>
-    <div class="hero-tags rv d3">
-      <span>★ 军事科技</span><span>◆ 地缘政治</span><span>✎ 世界构建</span>
-      <span>♟ 玩家推演</span><span>🤝 社区共创</span>
+  <div class="wrap">
+    <div class="hero-head">
+      <div class="kicker">An invented world · Built since 2022 · Still growing</div>
+      <h1>RUSKI</h1>
+      <div class="tag">— <b>from a bottle of vodka to a carrier</b> —</div>
     </div>
-    <div class="hero-cta rv d4">
-      <a class="btn btn-solid" href="#world">进入这个世界 ↓</a>
-      <a class="btn btn-ghost" href="#join">申请建交 · 加入共建</a>
+
+    <div class="hero-grid">
+      <div>
+        <div class="lab"><span>01 / Introduction film</span><span>5 min 27 sec</span></div>
+        <div class="frame">
+          <video controls preload="none" playsinline poster="assets/media/ruski-poster.jpg">
+            <source src="assets/media/ruski-intro.mp4" type="video/mp4">
+            Your browser cannot play this video. <a href="assets/media/ruski-intro.mp4">Download it instead</a>.
+          </video>
+        </div>
+      </div>
+      <div>
+        <div class="lab"><span>02 / The world map</span><span>Click to enlarge</span></div>
+        <div class="mapframe" data-full="assets/world/world-map.jpg" data-cap="The RUSKI world map — hand-drawn, sixth revision. More than twenty nations across three oceans.">
+          <img src="assets/world/world-map.jpg" alt="Hand-drawn map of the RUSKI world showing nations and oceans" loading="eager">
+          <div class="cap">Sixth revision · Ink on paper</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div><b>2022</b><small>Founded</small></div>
+      <div><b>4</b><small>Years of work</small></div>
+      <div><b>20+</b><small>Nations</small></div>
+      <div><b>5</b><small>Industries</small></div>
+      <div><b>71</b><small>Originals archived</small></div>
     </div>
   </div>
-  <div class="hero-quote">"Every friend that joins this story will be representing a country."</div>
-  <div class="ticker">
-    <div class="ticker-track" id="ticker"></div>
-  </div>
+
+  <div class="ticker"><span>&nbsp;·&nbsp; FROM A BOTTLE OF VODKA TO A CARRIER &nbsp;·&nbsp; TWENTY NATIONS, THREE OCEANS &nbsp;·&nbsp; A COMPLETE WORLD, DRAWN BY HAND &nbsp;·&nbsp; TWO FOUNDERS, FOUR YEARS &nbsp;·&nbsp; FROM A BOTTLE OF VODKA TO A CARRIER &nbsp;·&nbsp; TWENTY NATIONS, THREE OCEANS &nbsp;·&nbsp; A COMPLETE WORLD, DRAWN BY HAND &nbsp;·&nbsp; TWO FOUNDERS, FOUR YEARS &nbsp;·&nbsp;</span></div>
 </header>
 
-<!-- ================= STATS ================= -->
-<div class="stats">
-  <div class="stats-grid">
-    <div class="stat"><b data-count="2022">0</b><span>创立年份</span></div>
-    <div class="stat"><b data-count="4">0</b><span>位创始人</span></div>
-    <div class="stat"><b data-count="6">0</b><span>版世界地图迭代</span></div>
-    <div class="stat"><b data-count="16">0</b><span>+ 玩家国家</span></div>
-    <div class="stat"><b data-count="5">0</b><span>大本手绘档案</span></div>
-    <div class="stat"><b data-count="10000" data-plus="+">0</b><span>字级世界观文本</span></div>
-  </div>
-</div>
+<!-- ============ DISPATCH ============ -->
+<section id="dispatch">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="snum">Exhibit 01 — The Dispatch</div>
+      <h2>A newspaper written inside the world</h2>
+      <p>Before there was a website, there was a newsroom. The founders wrote their own in-world newspaper — reporting on a cold war that only existed because they had invented it.</p>
+    </div>
 
-<!-- ================= 01 WORLD ================= -->
+    <article class="np rv">
+      <div class="mast">
+        <h3>The Western United Media</h3>
+        <div class="meta">Conwave · Volume V W2<br>Media · Record</div>
+      </div>
+      <div class="band"><span>Morning edition</span><span>In-world publication</span><span>Conflict year 2049</span></div>
+      <h2 class="lede">Fefocian–Euthesean Cold War Report</h2>
+      <div class="sublede">Industry · Trade · Sanctions · Humanitarianism</div>
+
+      <div class="cols">
+        <h4>UAMO air force launches third strike</h4>
+        <p>The UAMO Air Force launched the third strike attack over DBO's main heavy industrial complex and oil pipelines, estimated to have destroyed 124 tanks, 14 fighters, 149 military sites and 21 heavy industrial complexes, with 2,344 casualties.</p>
+
+        <h4>Multi-warzone</h4>
+        <p>At 08:00 Euthesean Time, in response to Euthesean interference in the DBO warzone, the Insoc Government announced the launch of about 37,000 elite forces into the DBO warzone: 32 joint forces, 124 vehicles, 49 tank units, 32 helicopter units and 12 legendary Insoc Air Force squadrons.</p>
+        <p>The Euret Government announced about 42,000 elite forces: 37 joint forces, 138 vehicles, 59 tank units and 16 legendary Euret Air Force squadrons. Due to Euthesean interference in the Iresian Warzone, Fefoce and Euret launched elite forces to get over Euthesean forces. Direct conflict between Fefocian forces and Euthesean forces is unavoidable.</p>
+
+        <h4>Fefoce's military trade</h4>
+        <p>Fefoce's Ferlen corporation has completed contracts for 36 RNW-1 Rainbow 6.5-gen fighters for the Insoc and Euret Air Forces, 12 SK-75A with Erefert, and 25 EMB-25A for Insoc, Euret and Erefert. The companies claim to have profited over 1.3 billion dollars. Ferlen on the Dexlus Stock Exchange has risen 3% on large artillery orders.</p>
+
+        <h4>Euthesean allies' crisis</h4>
+        <p class="drop">Euthesean allied countries have faced crucial supply shortages and sudden economic falls due to UAMO sanctions. The South Bay Stock Exchange's Empelt index has declined about 56% since the war; in the first quarter alone it fell 7.4% under heavy attacks from UAMO.</p>
+        <p>The Euthesean economy does not look well either: the Voklivgrad Stock Exchange's Renexov index has declined about 12%, and economists predict a further 12% fall within weeks as sanctions bite. The Ireten Stock Exchange was forced to halt after Insocian bombing. In October the Centpian Union launched total sanctions against Euthesean allied countries.</p>
+        <p>Economist David Havif says: <i>"Euthesean allied countries had the ability to feed themselves but it won't be as in the past. Growth may occur but won't happen rapidly like in the past decades."</i></p>
+        <p>Promisingly, most Euthesean allied countries have contained the risk of high supply inflation. Euthesea provided large quantities of basic supplies, enough to replace losses; average inflation rose just 11% in each country except Irsem, which faces larger challenges.</p>
+        <p>Meanwhile the Dexlus Stock Exchange's Feclte index rose about 9% as money flowed into Fefoce's market from Euthesean allied countries. Large companies transferred properties to Fefoce. The Fefoce government cut taxes and subsidised overseas investment heavily. Unemployment in Fefoce is only 0.56%. Fefoce is now the second-largest economy in the world, just 1% below Noteversea. Annual GDP growth in 2049 is estimated at 34,590 billion Fefocian dollars. Statistics show the whole country's economy rising as the Calvin government takes the stage: in a survey, 82% of Fefocian citizens supported President Calvin's government.</p>
+
+        <h4>Supplies transfer for humanity</h4>
+        <p>At the October UUN war crisis meeting, countries discussed and agreed a contract not to block humanitarian supplies for countries at war. The lockdown of warzones will be intended only to stop military objectives, not to go over humane limits. Erefert delivered 102 tonnes of humanitarian supplies to support civilians in warzones; Erefert's actions are widely complimented by the international community.</p>
+      </div>
+
+      <div class="note">Reproduced from the founders' own in-world newsletter — written and typed by them, in English, as the war they had invented unfolded. Spelling and phrasing left as written. What it shows is not a story: it is a fourteen-year-old reasoning about sanctions, bond flows, unemployment and approval ratings, and finding it interesting enough to report.</div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ WORLD ============ -->
 <section id="world">
-  <div class="container">
-    <div class="sec-head rv">
-      <div class="sec-no">SECTION 01 · WHAT IS RUSKI</div>
-      <h2>世界观：一个可以加入的宇宙</h2>
-      <p class="sec-lead">RUSKI 不只是一份科幻设定，它是一台<b>「联合国模拟器」</b>：每位玩家代表一个虚构国家，
-      治理它的政治与管理体系，在贸易、结盟、冲突与历史事件中，亲手书写一颗星球的命运。</p>
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="snum">Exhibit 02 — The World</div>
+      <h2>Twenty nations, three oceans, one map</h2>
+      <p>Every nation has a position, a climate, an economy and a foreign policy. The two founders each govern one of the superpowers at the centre of the cold war.</p>
     </div>
 
-    <div class="world-split">
+    <div class="world-grid">
+      <div class="wcard rv" data-full="assets/world/world-map.jpg" data-cap="The RUSKI world map, sixth revision — the Faelian Ocean separates the two blocs.">
+        <img src="assets/world/world-map.jpg" alt="Hand-drawn RUSKI world map" loading="lazy">
+        <div class="cap">The Faelian Ocean divides the blocs · ink on cartridge paper</div>
+      </div>
+      <div class="nations rv">
+        <div class="nat f">
+          <h4>United Federation of Fefoce</h4>
+          <div class="en">U.F.F. · Western bloc</div>
+          <p>The industrial superpower. Defence exports through Ferlen, low unemployment, a stock exchange that rises when others fall. Second-largest economy in the world, one per cent behind Noteversea.</p>
+          <span class="owner">Calvin's nation</span>
+        </div>
+        <div class="nat d">
+          <h4>Federal Union of Euthesea</h4>
+          <div class="en">F.U.E. · Eastern bloc</div>
+          <p>The rival superpower and the centre of a sanctions-hit alliance. Supplies its allies through crisis, fights a cold war it never chose, and holds the line across two warzones.</p>
+          <span class="owner">Dash's nation</span>
+        </div>
+        <div class="nat">
+          <h4>U.A.P.R. — DBO</h4>
+          <div class="en">Union of Antartican Polar Republic</div>
+          <p>The polar republic. Heavy industry and oil pipelines, struck three times by UAMO air power.</p>
+        </div>
+        <div class="nat">
+          <h4>UAMO</h4>
+          <div class="en">Air coalition</div>
+          <p>Air power and sanctions. Runs the strike campaign over DBO and the embargo that breaks Euthesean supply chains.</p>
+        </div>
+        <div class="nat">
+          <h4>Euret Federal Republic</h4>
+          <div class="en">Continental power</div>
+          <p>Deploys 42,000 elite forces and 16 legendary air squadrons. Fefoce's principal ally.</p>
+        </div>
+        <div class="nat">
+          <h4>Insoc</h4>
+          <div class="en">Eastern command</div>
+          <p>37,000 elite forces and 12 legendary air squadrons. Bombs the Ireten exchange into a trading halt.</p>
+        </div>
+        <div class="nat">
+          <h4>Erefert</h4>
+          <div class="en">Neutral supplier</div>
+          <p>Delivers 102 tonnes of humanitarian aid and buys aircraft from Ferlen. Reputation as the world's conscience.</p>
+        </div>
+        <div class="nat">
+          <h4>Centpian Union</h4>
+          <div class="en">Sanctions bloc</div>
+          <p>Launches total sanctions against Euthesean allies in the October crisis.</p>
+        </div>
+        <div class="nat">
+          <h4>Noteversea</h4>
+          <div class="en">Largest economy</div>
+          <p>The benchmark Fefoce measures itself against — one per cent ahead and never mentioned without it.</p>
+        </div>
+        <div class="nat">
+          <h4>Ekranian Continent</h4>
+          <div class="en">Eastern landmass</div>
+          <p>A continent rather than a country: the eastern theatre where the two blocs meet.</p>
+        </div>
+        <div class="nat">
+          <h4>Kingdom of Aldmeia</h4>
+          <div class="en">Eastern monarchy</div>
+          <p>A monarchy wedged between the Euthesean sphere and the Faelian trade routes.</p>
+        </div>
+        <div class="nat">
+          <h4>Zephyria &amp; the southern states</h4>
+          <div class="en">Antartican rim</div>
+          <p>Sovalia, Azenta, Trekent and Zephyria — the southern tier, drawn but not yet played.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTORS ============ -->
+<section id="sectors">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="snum">Exhibit 03 — The Sectors</div>
+      <h2>Small in scale, complete in system</h2>
+      <p>Most invented worlds stop at armies and maps. RUSKI has a supermarket, a health service, a power grid and an aerospace industry — because a world where people live has to sell them things, treat them and keep the lights on. Five industries, drawn sheet by sheet.</p>
+    </div>
+
+    <!-- supermarket -->
+    <div class="sector rv">
+      <div class="side">
+        <div class="num">Industry 01</div>
+        <div class="logo" data-full="assets/supermarket/logo.jpg" data-cap="RUSKI SUPERMARKET — the shopfront, drawn on a notebook page."><img src="assets/supermarket/logo.jpg" alt="RUSKI Supermarket logo" loading="lazy"></div>
+        <h3>RUSKI Supermarket</h3>
+        <p class="desc">The consumer layer. Not a single fictional product, but a catalogue: packaging, unit prices, shelf plans and store layouts — the everyday economy a citizen actually lives inside.</p>
+        <div class="count">7 sheets · catalogue &amp; store design</div>
+      </div>
+      <div class="gal">
+        <figure data-full="assets/supermarket/market-01.jpg" data-n="01" data-cap="Store catalogue — bottles, cartons and price tags."><img src="assets/supermarket/market-01-t.jpg" alt="Supermarket catalogue page" loading="lazy"></figure>
+        <figure data-full="assets/supermarket/market-02.jpg" data-n="02" data-cap="Stock list and shelf allocation."><img src="assets/supermarket/market-02-t.jpg" alt="Stock list page" loading="lazy"></figure>
+        <figure data-full="assets/supermarket/market-03.jpg" data-n="03" data-cap="Goods page — packets, tins and unit prices."><img src="assets/supermarket/market-03-t.jpg" alt="Goods page" loading="lazy"></figure>
+        <figure data-full="assets/supermarket/market-04.jpg" data-n="04" data-cap="Bulk goods and storage containers."><img src="assets/supermarket/market-04-t.jpg" alt="Bulk goods page" loading="lazy"></figure>
+        <figure data-full="assets/supermarket/market-05.jpg" data-n="05" data-cap="Consumables sheet."><img src="assets/supermarket/market-05-t.jpg" alt="Consumables page" loading="lazy"></figure>
+        <figure data-full="assets/supermarket/market-06.jpg" data-n="06" data-cap="Household goods range."><img src="assets/supermarket/market-06-t.jpg" alt="Household goods page" loading="lazy"></figure>
+        <figure data-full="assets/supermarket/market-07.jpg" data-n="07" data-cap="Storefront and interior layout."><img src="assets/supermarket/market-07-t.jpg" alt="Storefront layout" loading="lazy"></figure>
+      </div>
+    </div>
+
+    <!-- medicine -->
+    <div class="sector rv">
+      <div class="side">
+        <div class="num">Industry 02</div>
+        <div class="logo" data-full="assets/medicine/logo.jpg" data-cap="RUSKI MEDICINE — marked on card."><img src="assets/medicine/logo.jpg" alt="RUSKI Medicine logo" loading="lazy"></div>
+        <h3>RUSKI Medicine</h3>
+        <p class="desc">Because a war needs a medical system behind it. Pharmacology, field kits and casualty evacuation — pills, vials, syringes, dressings and an anti-bacterial programme, with a supply chain attached.</p>
+        <div class="count">2 sheets · pharmacy &amp; field medicine</div>
+      </div>
+      <div class="gal">
+        <figure class="wide" data-full="assets/medicine/med-01.jpg" data-n="01" data-cap="Pharmacy and field-medical sheet — pills, vials, syringes, dressings and anti-bacterial supplies."><img src="assets/medicine/med-01-t.jpg" alt="Field medical sheet" loading="lazy"></figure>
+      </div>
+    </div>
+
+    <!-- energy -->
+    <div class="sector rv">
+      <div class="side">
+        <div class="num">Industry 03</div>
+        <div class="logo" data-full="assets/energy/logo.jpg" data-cap="RUSKI ENERGY — grid division."><img src="assets/energy/logo.jpg" alt="RUSKI Energy logo" loading="lazy"></div>
+        <h3>RUSKI Energy</h3>
+        <p class="desc">The sector that keeps the other four running. Generation, transmission and industrial plant — the infrastructure that makes factories, hospitals and supermarkets possible at all.</p>
+        <div class="count">2 sheets · generation &amp; grid</div>
+      </div>
+      <div class="gal">
+        <figure class="wide" data-full="assets/energy/energy-01.jpg" data-n="01" data-cap="Turbine and grid studies — generation, transmission and plant."><img src="assets/energy/energy-01-t.jpg" alt="Turbine and grid studies" loading="lazy"></figure>
+      </div>
+    </div>
+
+    <!-- military -->
+    <div class="sector rv">
+      <div class="side">
+        <div class="num">Industry 04</div>
+        <div class="logo" data-full="assets/military/logo.jpg" data-cap="RUSKI MILITARY — the longest-running strand of the project."><img src="assets/military/logo.jpg" alt="RUSKI Military logo" loading="lazy"></div>
+        <h3>RUSKI Military</h3>
+        <p class="desc">Where the world started: a single sidearm, then machine guns, then armour, artillery, helicopters, fast jets, a carrier — and finally a coastal defence network drawn as arcs of fire. The longest and most detailed sector.</p>
+        <div class="count">22 sheets · small arms to naval power</div>
+      </div>
+      <div class="gal">
+        <figure data-full="assets/military/m10.jpg" data-n="01" data-cap="Small arms and personal equipment."><img src="assets/military/m10-t.jpg" alt="Small arms sheet" loading="lazy"></figure>
+        <figure data-full="assets/military/m13.jpg" data-n="02" data-cap="Main battle tank beside a 'PMA bullpup' sidearm."><img src="assets/military/m13-t.jpg" alt="Tank and sidearm" loading="lazy"></figure>
+        <figure data-full="assets/military/m01.jpg" data-n="03" data-cap="Armoured vehicles — profiles with hand-lettered specifications."><img src="assets/military/m01-t.jpg" alt="Armoured vehicle profiles" loading="lazy"></figure>
+        <figure data-full="assets/military/m12.jpg" data-n="04" data-cap="Main battle tank, frontal study."><img src="assets/military/m12-t.jpg" alt="MBT frontal study" loading="lazy"></figure>
+        <figure data-full="assets/military/m09.jpg" data-n="05" data-cap="Armoured vehicle and MBT."><img src="assets/military/m09-t.jpg" alt="Armour study" loading="lazy"></figure>
+        <figure data-full="assets/military/m17.jpg" data-n="06" data-cap="Armoured column and tank."><img src="assets/military/m17-t.jpg" alt="Armoured column" loading="lazy"></figure>
+        <figure data-full="assets/military/m05.jpg" data-n="07" data-cap="Attack helicopter, detailed."><img src="assets/military/m05-t.jpg" alt="Attack helicopter" loading="lazy"></figure>
+        <figure data-full="assets/military/m19.jpg" data-n="08" data-cap="Two rotary-wing types."><img src="assets/military/m19-t.jpg" alt="Helicopter study" loading="lazy"></figure>
+        <figure data-full="assets/military/m02.jpg" data-n="09" data-cap="Fighter in three orthographic views."><img src="assets/military/m02-t.jpg" alt="Fighter orthographic views" loading="lazy"></figure>
+        <figure data-full="assets/military/m16.jpg" data-n="10" data-cap="Fighter with in-line performance annotations."><img src="assets/military/m16-t.jpg" alt="Annotated fighter" loading="lazy"></figure>
+        <figure data-full="assets/military/m18.jpg" data-n="11" data-cap="Airframe annotated for performance."><img src="assets/military/m18-t.jpg" alt="Annotated airframe" loading="lazy"></figure>
+        <figure data-full="assets/military/m15.jpg" data-n="12" data-cap="Jet formation."><img src="assets/military/m15-t.jpg" alt="Jet formation" loading="lazy"></figure>
+        <figure data-full="assets/military/m14.jpg" data-n="13" data-cap="Carrier deck, seen from the island."><img src="assets/military/m14-t.jpg" alt="Carrier deck" loading="lazy"></figure>
+        <figure data-full="assets/military/m03.jpg" data-n="14" data-cap="Rotary-wing and naval platforms."><img src="assets/military/m03-t.jpg" alt="Naval platforms" loading="lazy"></figure>
+        <figure class="wide" data-full="assets/military/fortification.jpg" data-n="15" data-cap="Coastal defence network — emplacements, arcs of fire and overlapping coverage."><img src="assets/military/fortification-t.jpg" alt="Coastal defence network" loading="lazy"></figure>
+        <figure class="wide" data-full="assets/military/battle.jpg" data-n="16" data-cap="Full battle scene — armour, infantry and air in a single frame."><img src="assets/military/battle-t.jpg" alt="Battle scene" loading="lazy"></figure>
+        <figure data-full="assets/military/m06.jpg" data-n="17" data-cap="Infantry and small-arms studies."><img src="assets/military/m06-t.jpg" alt="Infantry study" loading="lazy"></figure>
+        <figure data-full="assets/military/m07.jpg" data-n="18" data-cap="Airframe, plan view."><img src="assets/military/m07-t.jpg" alt="Plan view airframe" loading="lazy"></figure>
+        <figure data-full="assets/military/m08.jpg" data-n="19" data-cap="Helicopter and jet, sketched beside the binding."><img src="assets/military/m08-t.jpg" alt="Helicopter and jet" loading="lazy"></figure>
+        <figure data-full="assets/military/m11.jpg" data-n="20" data-cap="Exoskeleton infantryman — the bridge into the future-tech sector."><img src="assets/military/m11-t.jpg" alt="Exoskeleton soldier" loading="lazy"></figure>
+        <figure data-full="assets/military/m04.jpg" data-n="21" data-cap="Desk shot — armour sketches beside an open notebook."><img src="assets/military/m04-t.jpg" alt="Desk shot of armour sketches" loading="lazy"></figure>
+      </div>
+    </div>
+
+    <!-- future tech -->
+    <div class="sector rv">
+      <div class="side">
+        <div class="num">Industry 05</div>
+        <div class="logo" data-full="assets/futuretech/logo.jpg" data-cap="DACA — Aerospace Warfare Corporation, the future-tech division."><img src="assets/futuretech/logo.jpg" alt="DACA aerospace logo" loading="lazy"></div>
+        <h3>RUSKI Future Tech &amp; AI</h3>
+        <p class="desc">The horizon layer. Powered exoskeletons, autonomous platforms, directed-energy weapons and an orbital lattice drawn as a hexagonal coverage grid — a 7G network that doubles as a space defence net. Where the world is going next.</p>
+        <div class="count">15 sheets · robotics, energy weapons &amp; orbital systems</div>
+      </div>
+      <div class="gal">
+        <figure data-full="assets/futuretech/f01.jpg" data-n="01" data-cap="Powered armour / bipedal mech study."><img src="assets/futuretech/f01-t.jpg" alt="Powered armour study" loading="lazy"></figure>
+        <figure data-full="assets/futuretech/f05.jpg" data-n="02" data-cap="Full-page mech sheet with subsystem call-outs."><img src="assets/futuretech/f05-t.jpg" alt="Mech sheet" loading="lazy"></figure>
+        <figure data-full="assets/futuretech/f02.jpg" data-n="03" data-cap="Mech with annotated subsystems."><img src="assets/futuretech/f02-t.jpg" alt="Annotated mech" loading="lazy"></figure>
+        <figure data-full="assets/futuretech/f13.jpg" data-n="04" data-cap="Robot walker, front elevation."><img src="assets/futuretech/f13-t.jpg" alt="Robot walker" loading="lazy"></figure>
+        <figure data-full="assets/futuretech/f08.jpg" data-n="05" data-cap="Service robot."><img src="assets/futuretech/f08-t.jpg" alt="Service robot" loading="lazy"></figure>
+        <figure data-full="assets/futuretech/f11.jpg" data-n="06" data-cap="Two mechs in formation."><img src="assets/futuretech/f11-t.jpg" alt="Mechs in formation" loading="lazy"></figure>
+        <figure class="wide" data-full="assets/futuretech/f09.jpg" data-n="07" data-cap="Hexagonal orbital network — the coverage grid for a space defence net."><img src="assets/futuretech/f09-t.jpg" alt="Hexagonal orbital network" loading="lazy"></figure>
+        <figure class="wide" data-full="assets/futuretech/f10.jpg" data-n="08" data-cap="Orbital lattice detail."><img src="assets/futuretech/f10-t.jpg" alt="Orbital lattice" loading="lazy"></figure>
+        <figure data-full="assets/futuretech/f03.jpg" data-n="09" data-cap="Orbital and launch platform sketches."><img src="assets/futuretech/f03-t.jpg" alt="Orbital platform sketch" loading="lazy"></figure>
+        <figure data-full="assets/futuretech/f04.jpg" data-n="10" data-cap="Robot frame with annotated joints."><img src="assets/futuretech/f04-t.jpg" alt="Robot frame" loading="lazy"></figure>
+        <figure data-full="assets/futuretech/f06.jpg" data-n="11" data-cap="Aerospace platform concept."><img src="assets/futuretech/f06-t.jpg" alt="Aerospace concept" loading="lazy"></figure>
+        <figure data-full="assets/futuretech/f07.jpg" data-n="12" data-cap="Robot study with component notes."><img src="assets/futuretech/f07-t.jpg" alt="Robot component notes" loading="lazy"></figure>
+        <figure data-full="assets/futuretech/f12.jpg" data-n="13" data-cap="Autonomous platform concept."><img src="assets/futuretech/f12-t.jpg" alt="Autonomous platform" loading="lazy"></figure>
+        <figure class="wide" data-full="assets/futuretech/f14.jpg" data-n="14" data-cap="Swarm formation over terrain."><img src="assets/futuretech/f14-t.jpg" alt="Swarm formation" loading="lazy"></figure>
+        <figure class="wide" data-full="assets/futuretech/f15.jpg" data-n="15" data-cap="Systems spread — platform and control architecture."><img src="assets/futuretech/f15-t.jpg" alt="Systems spread" loading="lazy"></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOUNDERS ============ -->
+<section id="founders">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="snum">Exhibit 04 — The Founders</div>
+      <h2>Two boys, a school field, and four years</h2>
+      <p>RUSKI began in 2022 with an argument on the artificial turf of a school playing field. Everything below happened after that.</p>
+    </div>
+
+    <div class="two rv">
+      <div class="fcard f">
+        <div class="role">Co-founder · Fefoce</div>
+        <h3>Calvin</h3>
+        <div class="nat2">Head of the United Federation of Fefoce</div>
+        <p class="q">Left for the United Kingdom in 2024. The day he left, Dash drew him a farewell — and the world kept going, online.</p>
+      </div>
+      <div class="fcard d">
+        <div class="role">Co-founder · Euthesea</div>
+        <h3>Dash</h3>
+        <div class="nat2">Head of the Federal Union of Euthesea</div>
+        <p class="q">Stayed, kept the archive, and drew the goodbye. Now taking the world off paper and onto the open web.</p>
+      </div>
+    </div>
+
+    <div class="story">
+      <div class="rv">
+        <p><b>It started face-up on the ground.</b> Lying on the artificial grass of the school field, the two of them began inventing a world — not a story to read, but a place to run. Within a term it had a map, a flag and a war.</p>
+        <p><b>Then they invited others in.</b> Jack, Edison and Renhai joined the build. Life intervened: one transferred, one went abroad, one simply stopped. By the third year the founding group had come down to the two of them — and they kept drawing.</p>
+
+        <div class="pull">Four years, one world, and nobody asking them to finish it.</div>
+
+        <p><b>In 2024 they went to see real rockets.</b> Because the interest that powered the whole project was military and aerospace technology, they travelled to China's launch complexes at Xichang and Jiuquan — standing under an assembly tower, climbing a radar station, discovering what a real chain of engineering feels like.</p>
+        <p><b>And then they had to decide what the world was for.</b> Calvin was leaving for the UK; from then on they could only work online, across an ocean. In a long recorded discussion they reached two conclusions that this website exists to answer:</p>
+
+        <div class="dual" style="margin-top:22px">
+          <div><div class="n">Conclusion 01</div><h5>It has to go digital</h5><p>RUSKI cannot stay in sketchbooks. If two people who no longer live in the same country are going to keep building it, the world has to live somewhere both of them — and other people — can reach.</p></div>
+          <div><div class="n">Conclusion 02</div><h5>It has to grow</h5><p>A world run by two heads of state is a small world. If it is going to be worth anything, other players have to be able to join it, govern in it, and add to it.</p></div>
+        </div>
+
+        <p style="color:#6d7785;font-size:13.4px">Those two conclusions are the brief for this site. Everything from here on is execution.</p>
+      </div>
+
+      <div class="rv">
+        <div class="foundergal">
+          <figure data-full="assets/founders/camp-fort.jpg" data-cap="At the fort — study trip, 2024."><img src="assets/founders/camp-fort.jpg" alt="The founders at a fort during the study trip" loading="lazy"></figure>
+          <figure data-full="assets/founders/radar-station.jpg" data-cap="Under the radar dish at the launch complex."><img src="assets/founders/radar-station.jpg" alt="The founders at a radar station" loading="lazy"></figure>
+          <figure data-full="assets/founders/rocket-launch.jpg" data-cap="At the launch complex with the assembly tower behind them."><img src="assets/founders/rocket-launch.jpg" alt="The founders at a rocket launch complex" loading="lazy"></figure>
+          <figure data-full="assets/founders/ruski-shirts.jpg" data-cap="The RUSKI shirts — their own world, on their own backs."><img src="assets/founders/ruski-shirts.jpg" alt="The founders in RUSKI shirts" loading="lazy"></figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="goodbye rv" id="goodbye" data-full="assets/founders/goodbye-calvin.jpg" data-cap="'Goodbye to Calvin' — the farewell drawing Dash made in 2024: a rider on a red carpet, the crowds parting, armour and aircraft overhead.">
+      <img src="assets/founders/goodbye-calvin.jpg" alt="Goodbye to Calvin farewell drawing" loading="lazy">
+      <div class="cap">"Goodbye to Calvin" · drawn 2024 · one continuous panorama</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EVOLUTION ============ -->
+<section id="evolution">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="snum">Exhibit 05 — The Evolution</div>
+      <h2>Four years is long enough to see three things change</h2>
+      <p>Looking across the whole archive at once, the development is not only in what they drew, but in how well they drew it — and in how high they were aiming.</p>
+    </div>
+
+    <div class="track rv">
+      <div class="th"><div class="n">Track 01</div><h3>The hand gets steadier</h3></div>
+      <p class="tl">The earliest pages are loose felt-tip profiles, drawn to get the idea out of the head. Later sheets are measured orthographic views — front, plan, side — with dimensions, performance annotations and subsystem call-outs in the margins. Nothing formal was ever taught; the technique improved because the ambitions did.</p>
+      <div class="ladder">
+        <div class="rung" data-full="assets/military/m10.jpg" data-cap="Early: a single equipment sheet, loose line work."><img src="assets/military/m10-t.jpg" alt="Early equipment sheet" loading="lazy"><div class="y">Stage 01</div><h5>Freehand profile</h5><p>The idea, got down quickly.</p></div>
+        <div class="rung" data-full="assets/military/m01.jpg" data-cap="Measured profiles with hand-lettered specification notes."><img src="assets/military/m01-t.jpg" alt="Measured profiles" loading="lazy"><div class="y">Stage 02</div><h5>Measured views</h5><p>Multiple angles of the same object.</p></div>
+        <div class="rung" data-full="assets/military/m02.jpg" data-cap="Fighter in three orthographic views, annotated."><img src="assets/military/m02-t.jpg" alt="Orthographic views" loading="lazy"><div class="y">Stage 03</div><h5>Orthographic set</h5><p>Front, plan and side, consistently.</p></div>
+        <div class="rung" data-full="assets/military/m18.jpg" data-cap="Airframe annotated for performance."><img src="assets/military/m18-t.jpg" alt="Annotated airframe" loading="lazy"><div class="y">Stage 04</div><h5>Technical sheet</h5><p>Call-outs, notes and specifications.</p></div>
+        <div class="rung" data-full="assets/futuretech/f09.jpg" data-cap="The hexagonal orbital lattice — a diagram rather than a drawing."><img src="assets/futuretech/f09-t.jpg" alt="Orbital lattice diagram" loading="lazy"><div class="y">Stage 05</div><h5>Systems diagram</h5><p>Drawing what cannot be seen at all.</p></div>
+      </div>
+    </div>
+
+    <div class="track rv">
+      <div class="th"><div class="n">Track 02</div><h3>The subject escalates</h3></div>
+      <p class="tl">The scale of what they invented grew with the confidence. A pistol needs no logistics; a carrier needs a doctrine, a supply chain and an enemy. Each step up the ladder forced the rest of the world to become more real.</p>
+      <div class="ladder">
+        <div class="rung" data-full="assets/military/m13.jpg" data-cap="A sidearm, drawn at the same scale as the tank beside it."><img src="assets/military/m13-t.jpg" alt="Sidearm" loading="lazy"><div class="y">Level 01</div><h5>Small arms</h5><p>Sidearms, machine guns, personal kit.</p></div>
+        <div class="rung" data-full="assets/military/m12.jpg" data-cap="Main battle tank, frontal study."><img src="assets/military/m12-t.jpg" alt="Main battle tank" loading="lazy"><div class="y">Level 02</div><h5>Armour &amp; artillery</h5><p>Tanks, self-propelled guns, armour columns.</p></div>
+        <div class="rung" data-full="assets/military/m05.jpg" data-cap="Attack helicopter."><img src="assets/military/m05-t.jpg" alt="Attack helicopter" loading="lazy"><div class="y">Level 03</div><h5>Rotary &amp; fixed wing</h5><p>Helicopters, fast jets, air formations.</p></div>
+        <div class="rung" data-full="assets/military/m14.jpg" data-cap="Carrier deck from the island — the largest object in the archive."><img src="assets/military/m14-t.jpg" alt="Carrier deck" loading="lazy"><div class="y">Level 04</div><h5>Naval power</h5><p>Carriers, warships, fleet structure.</p></div>
+        <div class="rung" data-full="assets/military/m11.jpg" data-cap="Exoskeleton infantryman — the human rebuilt."><img src="assets/military/m11-t.jpg" alt="Exoskeleton infantry" loading="lazy"><div class="y">Level 05</div><h5>Exoskeleton &amp; robotics</h5><p>Powered armour, walkers, autonomous platforms.</p></div>
+        <div class="rung" data-full="assets/futuretech/f09.jpg" data-cap="Hexagonal coverage lattice — an orbital defence and 7G network."><img src="assets/futuretech/f09-t.jpg" alt="Orbital lattice" loading="lazy"><div class="y">Level 06</div><h5>Energy &amp; orbital</h5><p>Directed energy, space defence, AI support.</p></div>
+      </div>
+    </div>
+
+    <div class="track rv">
+      <div class="th"><div class="n">Track 03</div><h3>And the thinking climbs</h3></div>
+      <p class="tl">The most significant change is the least visible. Drawing a weapon is a design exercise; drawing a country is a systems exercise; running a war is a strategic one. Over four years the question they were asking moved from "what does this object look like" to "what does this world need, and who pays for it".</p>
+      <div class="ascent">
+        <div class="step" style="--w:20%"><div class="bar"></div><div class="k">Altitude 01</div><h5>The object</h5><p>What is it, how does it work, what does it look like from the side?</p></div>
+        <div class="step" style="--w:40%"><div class="bar"></div><div class="k">Altitude 02</div><h5>The institution</h5><p>Nation-building: ministries, uniforms, supply, a supermarket and a health service.</p></div>
+        <div class="step" style="--w:60%"><div class="bar"></div><div class="k">Altitude 03</div><h5>The enterprise</h5><p>Company operation: Ferlen's contracts, stock indices, profits and unemployment.</p></div>
+        <div class="step" style="--w:80%"><div class="bar"></div><div class="k">Altitude 04</div><h5>The doctrine</h5><p>Battle planning: deployment sizes, arcs of fire, escalation between two blocs.</p></div>
+        <div class="step" style="--w:100%"><div class="bar"></div><div class="k">Altitude 05</div><h5>The system</h5><p>Global and future consequences: sanctions, humanitarian law, orbital networks, AI.</p></div>
+      </div>
+    </div>
+
+    <div class="pull rv" style="border-color:var(--amber);color:var(--amber);max-width:820px">The interesting thing about RUSKI is not that two teenagers drew a lot of weapons. It is that they drew the supermarkets, hospitals and power grids those weapons exist to defend — and then worked out who would pay for them.</div>
+  </div>
+</section>
+
+<!-- ============ DIGITAL ============ -->
+<section id="digital">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="snum">Exhibit 06 — RUSKI Digitalisation</div>
+      <h2>Taking a paper world onto the internet</h2>
+      <p>In 2024 the two of them sat down with a whiteboard and worked out how a world made of notebooks could survive being separated by eight thousand miles.</p>
+    </div>
+
+    <div class="dig">
+      <div class="rv">
+        <p>The plan on the whiteboard was not a wishlist. It was an architecture: what the world was made of, what a player would need in order to act inside it, and what had to be true for the whole thing to work when nobody was in the same room.</p>
+        <p>They sketched a prototype of the interface, argued over what a player should see first, and started rendering their hand-drawn vehicles into digital form so that the archive could survive the move.</p>
+        <p>The site you are reading is step one of that plan. Not a portfolio of drawings — an entry point into a world that is still being built, by the two people who started it and, now, by anyone who wants to help run it.</p>
+        <div class="pull" style="font-size:19px">"If we can't sit in the same room any more, the world has to live somewhere we both can reach."</div>
+      </div>
+      <div class="rv">
+        <div class="diggal">
+          <figure class="wide" data-full="assets/digital/framework-1.jpg" data-cap="The whiteboard framework — how the world moves online."><img src="assets/digital/framework-1-t.jpg" alt="Whiteboard framework one" loading="lazy"></figure>
+          <figure class="wide" data-full="assets/digital/framework-2.jpg" data-cap="Framework, second pass — modules, players and data."><img src="assets/digital/framework-2-t.jpg" alt="Whiteboard framework two" loading="lazy"></figure>
+          <figure data-full="assets/digital/screen-both.jpg" data-cap="Dash and Calvin at the planning screen."><img src="assets/digital/screen-both-t.jpg" alt="Planning screen" loading="lazy"></figure>
+          <figure data-full="assets/digital/screen-dash.jpg" data-cap="Dash presenting the framework."><img src="assets/digital/screen-dash-t.jpg" alt="Dash presenting" loading="lazy"></figure>
+          <figure data-full="assets/digital/meeting.jpg" data-cap="Three of them, planning the build."><img src="assets/digital/meeting-t.jpg" alt="Planning meeting" loading="lazy"></figure>
+          <figure data-full="assets/digital/ai-tanks.jpg" data-cap="AI-assisted render of the MBT, for the digital prototype."><img src="assets/digital/ai-tanks-t.jpg" alt="AI assisted tank render" loading="lazy"></figure>
+          <figure data-full="assets/digital/ai-digital-1.jpg" data-cap="Digital concept render, prototype one."><img src="assets/digital/ai-digital-1-t.jpg" alt="Digital concept render one" loading="lazy"></figure>
+          <figure data-full="assets/digital/ai-digital-2.jpg" data-cap="Digital concept render, prototype two."><img src="assets/digital/ai-digital-2-t.jpg" alt="Digital concept render two" loading="lazy"></figure>
+          <figure data-full="assets/digital/proto-1.jpg" data-cap="Prototype tank study, hand-drawn."><img src="assets/digital/proto-1-t.jpg" alt="Prototype drawing" loading="lazy"></figure>
+          <figure data-full="assets/digital/proto-2.jpg" data-cap="Prototype tank study, second pass."><img src="assets/digital/proto-2-t.jpg" alt="Prototype drawing two" loading="lazy"></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMMUNITY ============ -->
+<section id="community">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="snum">Exhibit 07 — The Open Door</div>
+      <h2>This is not a product. It is a world with an open door.</h2>
+      <p>Everything above was built by two people who were not asked to build it. The next step is the one they planned in 2024: letting other people in. So the last section of a project about a fictional world is the part that is real.</p>
+    </div>
+
+    <div class="charter rv">
+      <div class="pr"><div class="n">Principle 01</div><h4>Honesty above drama</h4><p>A world is worth building only if it is consistent. Numbers add up, supply chains close, and nobody wins because the author said so.</p></div>
+      <div class="pr"><div class="n">Principle 02</div><h4>Think like a government</h4><p>Every decision has three costs: money, credibility and someone else's interests. Players are expected to think about the other two governments, not only their own.</p></div>
+      <div class="pr"><div class="n">Principle 03</div><h4>Everyone writes history</h4><p>The archive is open. If you add something to the world, it becomes canon — credited, dated, kept.</p></div>
+      <div class="pr"><div class="n">Principle 04</div><h4>Draw it or it did not happen</h4><p>Prose alone is not enough here. Vehicles, buildings, uniforms and documents are designed, not described.</p></div>
+      <div class="pr"><div class="n">Principle 05</div><h4>Build for the next revision</h4><p>Four years of work only matters if it can be handed on. Nothing in RUSKI is finished; everything is a version.</p></div>
+      <div class="pr"><div class="n">Principle 06</div><h4>Leave the door unlocked</h4><p>New players, new nations, new sectors. The world grows by being shared, not by being protected.</p></div>
+    </div>
+
+    <div class="join2 rv">
       <div>
-        <div class="doc-quote rv">
-          <div class="tape"></div>
-          <i>"Just like the real world, it has different continents, seas, geographical landscapes…
-          and every friend that joins this whole story will be representing a country."</i><br><br>
-          —— 和现实世界一样，它有大陆、海洋与地理景观；而每一个加入这个故事的朋友，
-          都将代表一个国家，真正治理自己国家的政治与管理制度。
-          <span class="src">SOURCE: RUSKI 手稿 · DASH 撰 · 2024 · 原件藏于世界档案库</span>
-        </div>
-        <div class="world-points">
-          <div class="pt rv d1">
-            <div class="ico">01</div>
-            <div><h4>每人一国，真实治理</h4><p>玩家为自己的国家设计国旗、政体，甚至创作国歌——不只是角色扮演，而是完整的国家经营。</p></div>
-          </div>
-          <div class="pt rv d2">
-            <div class="ico">02</div>
-            <div><h4>基于现实政治推演</h4><p>剧情以最新国际政治新闻为蓝本，但发生在架空时间线——用真实战略知识，推演另一个世界的走向。</p></div>
-          </div>
-          <div class="pt rv d3">
-            <div class="ico">03</div>
-            <div><h4>跨媒介创作生态</h4><p>手绘地图、坦克设定图、装备改装方案、平行宇宙设定集、旗帜与周边——文学×美术×工程设计的跨学科宇宙。</p></div>
-          </div>
-          <div class="pt rv d4">
-            <div class="ico">04</div>
-            <div><h4>会生长的世界</h4><p>世界地图已迭代六个版本。新玩家加入即扩展版图——RUSKI 是一个由参与者共同喂养、持续生长的活世界。</p></div>
-          </div>
-        </div>
+        <h3>How to join</h3>
+        <ul class="ways">
+          <li><b>Claim a nation</b><span>More than twenty nations are drawn; several are still unclaimed. A player takes one and governs it — its economy, its foreign policy and its armed forces.</span></li>
+          <li><b>Open a new sector</b><span>The archive has five industries. A new player can add a sixth — agriculture, media, transport, education.</span></li>
+          <li><b>Design into the archive</b><span>Contribute a vehicle, a building, a flag or a document, drawn in the house style, and it is added canonically.</span></li>
+          <li><b>Write the history</b><span>Record what happens. Every round produces dispatches, treaties and casualties, and someone has to be the historian.</span></li>
+        </ul>
       </div>
-
-      <div class="duel rv d2">
-        <h3>TWO SUPERPOWERS · 两极格局</h3>
-        <div class="duel-row"><div class="c1">费福斯联邦</div><div class="vs">VS</div><div class="c2">尤塞亚共和国</div></div>
-        <div class="duel-row"><div class="c1">United Federation of Fefoce</div><div class="vs">/</div><div class="c2">Republic of Euthesea</div></div>
-        <div class="duel-row"><div class="c1">体量对标美国</div><div class="vs">·</div><div class="c2">体量对标苏联</div></div>
-        <div class="duel-row"><div class="c1">Calvin 主理</div><div class="vs">·</div><div class="c2">东方阵营核心</div></div>
-        <div class="duel-row"><div class="c1">盟约网络型霸权</div><div class="vs">·</div><div class="c2">大陆体量型霸权</div></div>
-        <div class="duel-cap">
-          玩家必须在两极之间选边站队 —— <b style="color:var(--red)">中立者将孤立无援，难以善终。</b>
-          但站队不是终点：贸易制裁、联盟分化、军备竞赛……每一轮推演都在改写力量平衡。
-        </div>
-      </div>
-    </div>
-
-    <div class="finding rv">
-      <div class="badge">CORE<br>FINDING<br>核心发现</div>
       <div>
-        <h4>一场持续四年的地缘实验：「没有核武器的世界，更和平吗？」</h4>
-        <p>在 RUSKI 编年史中，<b>1980 年 Barkam 核事件</b>促使各国签署全面禁核条约。少年们随后观察到一个反直觉的结果：
-        <b>无核世界的战争与冲突频率，远高于现实世界</b> —— 以自己的方式验证了「核威慑悖论」。
-        这个发现被完整记录在创始档案《The Continental Universe》中，成为 RUSKI 世界观最深的一层思想内核。</p>
+        <h3>Where the build stands</h3>
+        <ul class="road">
+          <li><span class="st done">Done</span><div>A world, a map, five industries and a four-year drawing archive.</div></li>
+          <li><span class="st done">Done</span><div>An in-world press, with its own economics desk.</div></li>
+          <li><span class="st done">Done</span><div>A digitalisation plan and an interface prototype.</div></li>
+          <li><span class="st now">Now</span><div>This site: the world published, the archive visible, the door open.</div></li>
+          <li><span class="st next">Next</span><div>Interactive map with claimable nations and a player register.</div></li>
+          <li><span class="st next">Next</span><div>A shared archive where players submit and date their own additions.</div></li>
+          <li><span class="st next">Then</span><div>Running rounds — simultaneous turns, with sanctions, trade and casualties resolved by rules rather than by author.</div></li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= 02 HISTORY ================= -->
-<section id="history">
-  <div class="container">
-    <div class="sec-head rv">
-      <div class="sec-no">SECTION 02 · DEVELOPMENT HISTORY</div>
-      <h2>发展历史：从一张草稿纸到一个宇宙</h2>
-      <p class="sec-lead">2022 年至今，RUSKI 走过<b>创世、军备、体系化、沉淀、上线</b>五个纪元。以下时间线基于创始档案与手稿整理。</p>
+<!-- ============ ARCHIVE ============ -->
+<section id="archive">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="snum">Exhibit 08 — The Archive</div>
+      <h2>Every sheet, in one place</h2>
+      <p>The complete digital archive: seventy-one originals. Click any sheet to view it full size.</p>
     </div>
 
-    <div class="tl">
-      <div class="tl-item rv">
-        <div class="dot"></div>
-        <div class="tl-year">2022</div>
-        <div class="tl-tag">创世纪元 · GENESIS</div>
-        <h3>RUSKI 诞生于一张草稿纸</h3>
-        <p>Dash 与 <b>Calvin、Jacky、Edison</b> 三位同伴共同创立 RUSKI。Dash 执笔世界观主设定，
-        代表国为 <b>BBO</b>（南极极地共和国联邦 U.A.P.R.，原型南极洲，图腾企鹅）；Calvin 代表 <b>Fofce</b>。
-        一个基于真实政治、发生在平行星球的国家模拟游戏，就此开局。</p>
-      </div>
-      <div class="tl-item rv">
-        <div class="dot"></div>
-        <div class="tl-year">2023</div>
-        <div class="tl-tag">军备纪元 · ARMAMENT</div>
-        <h3>把架空军事做到毫米级</h3>
-        <p><b>K‑1A 主战坦克</b>设定图成型：苏系血统、倾斜装甲、反应装甲布局，一页页手绘推敲。
-        同年 5 月 21 日完成《泽宁特改装方案》—— 从波箱、火帽到红点瞄具的完整装备研究档案，
-        让 RUSKI 的军事线同时具备<b>想象力与工程写实</b>。</p>
-      </div>
-      <div class="tl-item rv">
-        <div class="dot"></div>
-        <div class="tl-year">2024</div>
-        <div class="tl-tag">体系纪元 · CANON</div>
-        <h3>第六版世界地图与平行宇宙成文</h3>
-        <p>世界地图迭代至<b>第 6 版</b>：六大大陆、三大洋、十余国疆域全部定稿。
-        Calvin 发布平行宇宙官方设定集 <b>《The Continental Universe》</b>：16 名玩家、两大超级大国、
-        1980 禁核条约与 2013 国际太空电梯。BBO 国旗定稿，T 恤周边设计并量产。</p>
-      </div>
-      <div class="tl-item rv">
-        <div class="dot"></div>
-        <div class="tl-year">2025</div>
-        <div class="tl-tag">沉淀纪元 · ARCHIVE</div>
-        <h3>五大本手绘档案成型</h3>
-        <p>累计 <b>5 大本手绘作品与故事</b>（数万字）装订成档。创始人随留学足迹分处中英两地，
-        RUSKI 进入<b>跨时区运转</b>：课间与深夜的聊天窗口里，世界的另一场危机正在发生。</p>
-      </div>
-      <div class="tl-item rv">
-        <div class="dot"></div>
-        <div class="tl-year">2026</div>
-        <div class="tl-tag">上线纪元 · GO ONLINE</div>
-        <h3>RUSKI 线上化启动</h3>
-        <p>项目从课桌走向互联网：<b>本网站上线</b>，世界档案数字化，向全球玩家开放建交与共建。
-        目标只有一个 —— 让这个由少年创造的世界，开始自己生长。</p>
-      </div>
+    <div class="filters rv">
+      <button class="on" data-f="all">All</button>
+      <button data-f="military">Military</button>
+      <button data-f="futuretech">Future tech</button>
+      <button data-f="supermarket">Supermarket</button>
+      <button data-f="world">World</button>
+      <button data-f="founders">Founders</button>
+      <button data-f="digital">Digitalisation</button>
+      <button data-f="medicine">Medicine</button>
+      <button data-f="energy">Energy</button>
     </div>
 
-    <div class="chron rv">
-      <div class="chron-inner">
-        <div class="chron-cell"><b>1980</b><span>第一次 Barkam 战争爆发；Barkam 核事件震动世界，联合国促成《全面禁核条约》。</span></div>
-        <div class="chron-cell"><b>1980s–2000s</b><span>禁核后的世界并未和平：两极阵营对峙，常规战争与代理人冲突频率远超现实世界。</span></div>
-        <div class="chron-cell"><b>2013.8.17</b><span>冷战落幕的纪念碑 —— 国际太空电梯（ISE）落成，人类以合作方式触及星空。</span></div>
-        <div class="chron-cell"><b>NOW</b><span>无核世界的持续冲突实验仍在进行。新的国家（就是你？）正被邀请加入推演。</span></div>
-      </div>
-      <div class="chron-note">※ 以上为 RUSKI 宇宙内的架空编年史，与现实无关，却处处照见现实。</div>
-    </div>
-  </div>
-</section>
+    <div class="arch rv">
+      <figure class="world" data-full="assets/world/world-map.jpg" data-cap="World map, sixth revision."><img src="assets/world/world-map-t.jpg" alt="World map" loading="lazy"></figure>
+      <figure class="world" data-full="assets/world/vodka-to-carrier.jpg" data-cap="'From a bottle of vodka to a carrier' — the project's own tagline."><img src="assets/world/vodka-to-carrier-t.jpg" alt="Vodka to carrier artwork" loading="lazy"></figure>
+      <figure class="world" data-full="assets/world/dressing-code.jpg" data-cap="Dressing Code 01 — uniform regulations."><img src="assets/world/dressing-code-t.jpg" alt="Dressing code sheet" loading="lazy"></figure>
+      <figure class="world" data-full="assets/world/globe-draft.jpg" data-cap="Globe and territory draft."><img src="assets/world/globe-draft-t.jpg" alt="Globe draft" loading="lazy"></figure>
+      <figure class="world" data-full="assets/world/radar-net.jpg" data-cap="Detection and coverage study."><img src="assets/world/radar-net-t.jpg" alt="Radar coverage study" loading="lazy"></figure>
+      <figure class="world" data-full="assets/world/daca-aerospace.jpg" data-cap="DACA — Aerospace Warfare Corporation."><img src="assets/world/daca-aerospace-t.jpg" alt="DACA logo" loading="lazy"></figure>
 
-<!-- ================= 03 GALLERY ================= -->
-<section id="gallery">
-  <div class="container">
-    <div class="sec-head rv">
-      <div class="sec-no">SECTION 03 · THE ARCHIVE</div>
-      <h2>世界档案库：把 RUSKI 呈现在网络上</h2>
-      <p class="sec-lead">以下均为<b>创始手稿原件扫描</b>。点击任意档案可放大查看 —— 四年创作的每一道笔迹，都值得被世界看见。</p>
-    </div>
+      <figure class="military" data-full="assets/military/m01.jpg" data-cap="Armoured vehicles, annotated."><img src="assets/military/m01-t.jpg" alt="Armoured vehicles" loading="lazy"></figure>
+      <figure class="military" data-full="assets/military/m02.jpg" data-cap="Fighter, orthographic views."><img src="assets/military/m02-t.jpg" alt="Fighter views" loading="lazy"></figure>
+      <figure class="military" data-full="assets/military/m03.jpg" data-cap="Rotary and naval platforms."><img src="assets/military/m03-t.jpg" alt="Naval platforms" loading="lazy"></figure>
+      <figure class="military" data-full="assets/military/m04.jpg" data-cap="Desk shot, armour sketches."><img src="assets/military/m04-t.jpg" alt="Desk shot" loading="lazy"></figure>
+      <figure class="military" data-full="assets/military/m05.jpg" data-cap="Attack helicopter."><img src="assets/military/m05-t.jpg" alt="Attack helicopter" loading="lazy"></figure>
+      <figure class="military" data-full="assets/military/m06.jpg" data-cap="Infantry and small arms."><img src="assets/military/m06-t.jpg" alt="Infantry study" loading="lazy"></figure>
+      <figure class="military" data-full="assets/military/m07.jpg" data-cap="Airframe, plan view."><img src="assets/military/m07-t.jpg" alt="Plan view" loading="lazy"></figure>
+      <figure class="military" data-full="assets/military/m08.jpg" data-cap="Helicopter and jet."><img src="assets/military/m08-t.jpg" alt="Helicopter and jet" loading="lazy"></figure>
+      <figure class="military" data-full="assets/military/m09.jpg" data-cap="Armoured vehicle and MBT."><img src="assets/military/m09-t.jpg" alt="Armour study" loading="lazy"></figure>
+      <figure class="military" data-full="assets/military/m10.jpg" data-cap="Small arms and equipment."><img src="assets/military/m10-t.jpg" alt="Equipment sheet" loading="lazy"></figure>
+      <figure class="military" data-full="assets/military/m11.jpg" data-cap="Exoskeleton infantryman."><img src="assets/military/m11-t.jpg" alt="Exoskeleton" loading="lazy"></figure>
+      <figure class="military" data-full="assets/military/m12.jpg" data-cap="MBT, frontal study."><img src="assets/military/m12-t.jpg" alt="MBT" loading="lazy"></figure>
+      <figure class="military" data-full="assets/military/m13.jpg" data-cap="MBT and sidearm."><img src="assets/military/m13-t.jpg" alt="Tank and sidearm" loading="lazy"></figure>
+      <figure class="military" data-full="assets/military/m14.jpg" data-cap="Carrier deck."><img src="assets/military/m14-t.jpg" alt="Carrier deck" loading="lazy"></figure>
+      <figure class="military" data-full="assets/military/m15.jpg" data-cap="Jet formation."><img src="assets/military/m15-t.jpg" alt="Jet formation" loading="lazy"></figure>
+      <figure class="military" data-full="assets/military/m16.jpg" data-cap="Annotated fighter."><img src="assets/military/m16-t.jpg" alt="Annotated fighter" loading="lazy"></figure>
+      <figure class="military" data-full="assets/military/m17.jpg" data-cap="Armoured column."><img src="assets/military/m17-t.jpg" alt="Armoured column" loading="lazy"></figure>
+      <figure class="military" data-full="assets/military/m18.jpg" data-cap="Airframe performance notes."><img src="assets/military/m18-t.jpg" alt="Airframe notes" loading="lazy"></figure>
+      <figure class="military" data-full="assets/military/m19.jpg" data-cap="Two rotary-wing types."><img src="assets/military/m19-t.jpg" alt="Two helicopters" loading="lazy"></figure>
+      <figure class="military" data-full="assets/military/battle.jpg" data-cap="Battle scene panorama."><img src="assets/military/battle-t.jpg" alt="Battle scene" loading="lazy"></figure>
+      <figure class="military" data-full="assets/military/fortification.jpg" data-cap="Coastal defence network."><img src="assets/military/fortification-t.jpg" alt="Defence network" loading="lazy"></figure>
+      <figure class="military" data-full="assets/military/logo.jpg" data-cap="RUSKI Military."><img src="assets/military/logo-t.jpg" alt="Military logo" loading="lazy"></figure>
 
-    <div class="gal-grid">
-      <figure class="gal-item g7 land rv" data-cap="世界地图 · 第六版" data-sub="WORLD MAP V6 · HAND DRAWN · THIS IS THE 6TH VERSION OF THE WORLD MAP">
-        <img src="assets/originals/world_map_v6.png" alt="RUSKI 世界地图第六版手绘原稿">
-        <figcaption class="gal-cap"><span>ARCHIVE No.01 · WORLD MAP</span><b>世界地图 · 第六版</b>六大大陆、三大洋——少年笔下的整颗星球</figcaption>
-      </figure>
-      <figure class="gal-item g5 land rv" data-cap="BBO 国旗" data-sub="THE NATIONAL FLAG OF U.A.P.R. BBO · 原件扫描">
-        <img src="assets/originals/bbo_flag.jpg" alt="BBO 国旗设计原稿">
-        <figcaption class="gal-cap"><span>ARCHIVE No.02 · NATIONAL FLAG</span><b>BBO 国旗</b>极地蓝与信号橙 · 企鹅之国的星翼徽记</figcaption>
-      </figure>
-      <figure class="gal-item g4 land rv" data-cap="K‑1A 主战坦克设定图" data-sub="K‑1A MBT CONCEPT SKETCH · MILITARY TECH DIVISION">
-        <img src="assets/originals/tank_k1a.png" alt="K-1A 主战坦克手绘设定图">
-        <figcaption class="gal-cap"><span>ARCHIVE No.03 · MILITARY TECH</span><b>K‑1A 主战坦克设定图</b>苏系血统 · 军事科技部门的原创装备</figcaption>
-      </figure>
-      <figure class="gal-item g4 rv" data-cap="《泽宁特改装方案》" data-sub="ZENITH MODIFICATION PROGRAM · 2023.05.21 · DASH">
-        <img src="assets/originals/ruski_zenith_p1.png" alt="泽宁特改装方案手稿">
-        <figcaption class="gal-cap"><span>ARCHIVE No.04 · EQUIPMENT R&D</span><b>《泽宁特改装方案》</b>架空军事落到毫米级的装备研究档案</figcaption>
-      </figure>
-      <figure class="gal-item g4 rv" data-cap="世界观手稿 · 开篇" data-sub="MANUSCRIPT · INTRODUCING RUSKI · ENGLISH EXAM PAPER 2024">
-        <img src="assets/originals/ruski_main_p1.png" alt="RUSKI 世界观手稿第一页">
-        <figcaption class="gal-cap"><span>ARCHIVE No.05 · MANUSCRIPT</span><b>世界观手稿 · 开篇</b>「每一个加入故事的朋友，都将代表一个国家」</figcaption>
-      </figure>
-      <figure class="gal-item g6 rv" data-cap="BBO 国家设定手稿" data-sub="MANUSCRIPT · DBO / BBO NATION PROFILE">
-        <img src="assets/originals/ruski_main_p2.png" alt="BBO 国家设定手稿">
-        <figcaption class="gal-cap"><span>ARCHIVE No.06 · NATION PROFILE</span><b>BBO 国家设定手稿</b>60% 冰原 · 巨大山脉 · 针叶林 · 企鹅图腾</figcaption>
-      </figure>
-      <figure class="gal-item g6 rv" data-cap="《The Continental Universe》· 平行宇宙设定集" data-sub="BY CALVIN · 16 PLAYERS · TWO SUPERPOWERS · NO NUCLEAR WORLD">
-        <img src="assets/originals/calvin_p1.png" alt="Calvin 平行宇宙设定集封面">
-        <figcaption class="gal-cap"><span>ARCHIVE No.07 · PARALLEL UNIVERSE</span><b>《The Continental Universe》</b>Calvin 主笔的平行宇宙官方设定集</figcaption>
-      </figure>
-      <figure class="gal-item g6 rv" data-cap="太空电梯与战略哲学" data-sub="INTERNATIONAL SPACE ELEVATOR 2013.8.17 · STRATEGY NOTES">
-        <img src="assets/originals/calvin_p2.png" alt="太空电梯设定图与战略哲学手稿">
-        <figcaption class="gal-cap"><span>ARCHIVE No.08 · ISE & STRATEGY</span><b>太空电梯与战略哲学</b>冷战终结纪念碑 · 「像政治家一样思考」</figcaption>
-      </figure>
-      <figure class="gal-item g6 rv" data-cap="地区地图与战斗机档案" data-sub="REGIONAL MAP & INSOCIAN FIGHTER · FIRST BARKAM WAR 1980">
-        <img src="assets/originals/calvin_p3.png" alt="地区地图与战斗机设定">
-        <figcaption class="gal-cap"><span>ARCHIVE No.09 · WAR ARCHIVE</span><b>地区地图与战斗机档案</b>第一次 Barkam 战争 · Insocian 战斗机</figcaption>
-      </figure>
-    </div>
+      <figure class="futuretech" data-full="assets/futuretech/f01.jpg" data-cap="Powered armour."><img src="assets/futuretech/f01-t.jpg" alt="Powered armour" loading="lazy"></figure>
+      <figure class="futuretech" data-full="assets/futuretech/f02.jpg" data-cap="Mech with call-outs."><img src="assets/futuretech/f02-t.jpg" alt="Annotated mech" loading="lazy"></figure>
+      <figure class="futuretech" data-full="assets/futuretech/f03.jpg" data-cap="Orbital platform sketches."><img src="assets/futuretech/f03-t.jpg" alt="Orbital platform" loading="lazy"></figure>
+      <figure class="futuretech" data-full="assets/futuretech/f04.jpg" data-cap="Robot frame."><img src="assets/futuretech/f04-t.jpg" alt="Robot frame" loading="lazy"></figure>
+      <figure class="futuretech" data-full="assets/futuretech/f05.jpg" data-cap="Full-page mech sheet."><img src="assets/futuretech/f05-t.jpg" alt="Mech sheet" loading="lazy"></figure>
+      <figure class="futuretech" data-full="assets/futuretech/f06.jpg" data-cap="Aerospace concept."><img src="assets/futuretech/f06-t.jpg" alt="Aerospace concept" loading="lazy"></figure>
+      <figure class="futuretech" data-full="assets/futuretech/f07.jpg" data-cap="Robot component notes."><img src="assets/futuretech/f07-t.jpg" alt="Robot notes" loading="lazy"></figure>
+      <figure class="futuretech" data-full="assets/futuretech/f08.jpg" data-cap="Service robot."><img src="assets/futuretech/f08-t.jpg" alt="Service robot" loading="lazy"></figure>
+      <figure class="futuretech" data-full="assets/futuretech/f09.jpg" data-cap="Hexagonal orbital network."><img src="assets/futuretech/f09-t.jpg" alt="Orbital network" loading="lazy"></figure>
+      <figure class="futuretech" data-full="assets/futuretech/f10.jpg" data-cap="Orbital lattice detail."><img src="assets/futuretech/f10-t.jpg" alt="Orbital lattice" loading="lazy"></figure>
+      <figure class="futuretech" data-full="assets/futuretech/f11.jpg" data-cap="Mechs in formation."><img src="assets/futuretech/f11-t.jpg" alt="Mechs" loading="lazy"></figure>
+      <figure class="futuretech" data-full="assets/futuretech/f12.jpg" data-cap="Autonomous platform."><img src="assets/futuretech/f12-t.jpg" alt="Autonomous platform" loading="lazy"></figure>
+      <figure class="futuretech" data-full="assets/futuretech/f13.jpg" data-cap="Robot walker."><img src="assets/futuretech/f13-t.jpg" alt="Robot walker" loading="lazy"></figure>
+      <figure class="futuretech" data-full="assets/futuretech/f14.jpg" data-cap="Swarm formation."><img src="assets/futuretech/f14-t.jpg" alt="Swarm" loading="lazy"></figure>
+      <figure class="futuretech" data-full="assets/futuretech/f15.jpg" data-cap="Systems spread."><img src="assets/futuretech/f15-t.jpg" alt="Systems spread" loading="lazy"></figure>
+      <figure class="futuretech" data-full="assets/futuretech/logo.jpg" data-cap="DACA aerospace."><img src="assets/futuretech/logo-t.jpg" alt="DACA logo" loading="lazy"></figure>
 
-    <div class="works-table rv">
-      <table class="ruski">
-        <thead><tr><th>产出类别</th><th>规模 / 描述</th><th>状态</th><th>载体</th></tr></thead>
-        <tbody>
-          <tr><td><b>手绘作品与故事</b></td><td><b>5 大本</b> · 数万字世界观文本</td><td><span class="pill done">已完成</span></td><td>纸质档案 · 数字化进行中</td></tr>
-          <tr><td><b>世界地图</b></td><td>六大大陆 · 三大洋 · 迭代 <b>6 版</b></td><td><span class="pill done">第 6 版定稿</span></td><td>手绘原稿（见档案 No.01）</td></tr>
-          <tr><td><b>品牌视觉系统</b></td><td>BBO 国旗 · RUSKI 标识与旗帜</td><td><span class="pill done">已完成</span></td><td>手绘 + 数字稿（见档案 No.02）</td></tr>
-          <tr><td><b>周边产品</b></td><td>T 恤设计与生产</td><td><span class="pill done">已量产</span></td><td>实体周边</td></tr>
-          <tr><td><b>军事科技档案</b></td><td>K‑1A 坦克设定 · 泽宁特改装方案</td><td><span class="pill done">已完成</span></td><td>手绘 + 研究文档</td></tr>
-          <tr><td><b>平行宇宙设定集</b></td><td>《The Continental Universe》10 页全档</td><td><span class="pill done">已完成</span></td><td>手绘扫描（见档案 No.07–09）</td></tr>
-          <tr><td><b>RUSKI 线上平台</b></td><td>本网站 · 世界档案库 · 玩家共建入口</td><td><span class="pill prog">进行中 · v1 上线</span></td><td>Web</td></tr>
-          <tr><td><b>玩家国家注册系统</b></td><td>全球玩家建交 · 版图扩展提案</td><td><span class="pill open">规划中 · 见路线图</span></td><td>Web · 2027</td></tr>
-        </tbody>
-      </table>
+      <figure class="supermarket" data-full="assets/supermarket/logo.jpg" data-cap="RUSKI Supermarket."><img src="assets/supermarket/logo-t.jpg" alt="Supermarket logo" loading="lazy"></figure>
+      <figure class="supermarket" data-full="assets/supermarket/market-01.jpg" data-cap="Catalogue page."><img src="assets/supermarket/market-01-t.jpg" alt="Catalogue page" loading="lazy"></figure>
+      <figure class="supermarket" data-full="assets/supermarket/market-02.jpg" data-cap="Stock list."><img src="assets/supermarket/market-02-t.jpg" alt="Stock list" loading="lazy"></figure>
+      <figure class="supermarket" data-full="assets/supermarket/market-03.jpg" data-cap="Goods page."><img src="assets/supermarket/market-03-t.jpg" alt="Goods page" loading="lazy"></figure>
+      <figure class="supermarket" data-full="assets/supermarket/market-04.jpg" data-cap="Bulk goods."><img src="assets/supermarket/market-04-t.jpg" alt="Bulk goods" loading="lazy"></figure>
+      <figure class="supermarket" data-full="assets/supermarket/market-05.jpg" data-cap="Consumables."><img src="assets/supermarket/market-05-t.jpg" alt="Consumables" loading="lazy"></figure>
+      <figure class="supermarket" data-full="assets/supermarket/market-06.jpg" data-cap="Household goods."><img src="assets/supermarket/market-06-t.jpg" alt="Household goods" loading="lazy"></figure>
+      <figure class="supermarket" data-full="assets/supermarket/market-07.jpg" data-cap="Store layout."><img src="assets/supermarket/market-07-t.jpg" alt="Store layout" loading="lazy"></figure>
+
+      <figure class="medicine" data-full="assets/medicine/logo.jpg" data-cap="RUSKI Medicine."><img src="assets/medicine/logo-t.jpg" alt="Medicine logo" loading="lazy"></figure>
+      <figure class="medicine" data-full="assets/medicine/med-01.jpg" data-cap="Pharmacy and field medicine."><img src="assets/medicine/med-01-t.jpg" alt="Field medicine" loading="lazy"></figure>
+
+      <figure class="energy" data-full="assets/energy/logo.jpg" data-cap="RUSKI Energy."><img src="assets/energy/logo-t.jpg" alt="Energy logo" loading="lazy"></figure>
+      <figure class="energy" data-full="assets/energy/energy-01.jpg" data-cap="Turbine and grid."><img src="assets/energy/energy-01-t.jpg" alt="Turbine study" loading="lazy"></figure>
+
+      <figure class="founders" data-full="assets/founders/camp-fort.jpg" data-cap="At the fort, 2024."><img src="assets/founders/camp-fort-t.jpg" alt="Founders at the fort" loading="lazy"></figure>
+      <figure class="founders" data-full="assets/founders/radar-station.jpg" data-cap="Under the radar dish."><img src="assets/founders/radar-station-t.jpg" alt="Radar station" loading="lazy"></figure>
+      <figure class="founders" data-full="assets/founders/rocket-launch.jpg" data-cap="At the launch complex."><img src="assets/founders/rocket-launch-t.jpg" alt="Launch complex" loading="lazy"></figure>
+      <figure class="founders" data-full="assets/founders/ruski-shirts.jpg" data-cap="The RUSKI shirts."><img src="assets/founders/ruski-shirts-t.jpg" alt="RUSKI shirts" loading="lazy"></figure>
+      <figure class="founders" data-full="assets/founders/goodbye-calvin.jpg" data-cap="Goodbye to Calvin, 2024."><img src="assets/founders/goodbye-calvin-t.jpg" alt="Goodbye drawing" loading="lazy"></figure>
+
+      <figure class="digital" data-full="assets/digital/framework-1.jpg" data-cap="Whiteboard framework."><img src="assets/digital/framework-1-t.jpg" alt="Framework one" loading="lazy"></figure>
+      <figure class="digital" data-full="assets/digital/framework-2.jpg" data-cap="Framework, second pass."><img src="assets/digital/framework-2-t.jpg" alt="Framework two" loading="lazy"></figure>
+      <figure class="digital" data-full="assets/digital/meeting.jpg" data-cap="Planning the build."><img src="assets/digital/meeting-t.jpg" alt="Planning" loading="lazy"></figure>
+      <figure class="digital" data-full="assets/digital/screen-both.jpg" data-cap="At the planning screen."><img src="assets/digital/screen-both-t.jpg" alt="Planning screen" loading="lazy"></figure>
+      <figure class="digital" data-full="assets/digital/screen-dash.jpg" data-cap="Dash presenting."><img src="assets/digital/screen-dash-t.jpg" alt="Dash presenting" loading="lazy"></figure>
+      <figure class="digital" data-full="assets/digital/ai-tanks.jpg" data-cap="AI render for the prototype."><img src="assets/digital/ai-tanks-t.jpg" alt="AI render" loading="lazy"></figure>
+      <figure class="digital" data-full="assets/digital/ai-digital-1.jpg" data-cap="Digital concept, prototype one."><img src="assets/digital/ai-digital-1-t.jpg" alt="Digital concept one" loading="lazy"></figure>
+      <figure class="digital" data-full="assets/digital/ai-digital-2.jpg" data-cap="Digital concept, prototype two."><img src="assets/digital/ai-digital-2-t.jpg" alt="Digital concept two" loading="lazy"></figure>
+      <figure class="digital" data-full="assets/digital/proto-1.jpg" data-cap="Prototype study."><img src="assets/digital/proto-1-t.jpg" alt="Prototype one" loading="lazy"></figure>
+      <figure class="digital" data-full="assets/digital/proto-2.jpg" data-cap="Prototype study, second pass."><img src="assets/digital/proto-2-t.jpg" alt="Prototype two" loading="lazy"></figure>
     </div>
   </div>
 </section>
 
-<!-- ================= 04 ATLAS ================= -->
-<section id="atlas">
-  <div class="container">
-    <div class="sec-head rv">
-      <div class="sec-no">SECTION 04 · NATIONS ATLAS</div>
-      <h2>国家图鉴：点击大陆，认识这个世界</h2>
-      <p class="sec-lead">示意图依据创始手稿第 6 版世界地图重绘。创始国已亮起金边，<b>未认领的大陆正在等待新的国家元首</b> —— 也许就是你。</p>
-    </div>
-
-    <div class="map-wrap rv">
-      <div class="map-box">
-        <svg viewBox="0 0 1000 560" id="worldMap" role="img" aria-label="RUSKI 世界示意图">
-          <!-- graticule -->
-          <g stroke="rgba(74,143,224,.10)" stroke-width="1">
-            <line x1="0" y1="140" x2="1000" y2="140"/><line x1="0" y1="280" x2="1000" y2="280"/><line x1="0" y1="420" x2="1000" y2="420"/>
-            <line x1="250" y1="0" x2="250" y2="560"/><line x1="500" y1="0" x2="500" y2="560"/><line x1="750" y1="0" x2="750" y2="560"/>
-          </g>
-          <!-- oceans -->
-          <text class="ocean-lbl" x="560" y="165">FAELIAN OCEAN</text>
-          <text class="ocean-lbl" x="600" y="330">RTANIAN OCEAN</text>
-          <text class="ocean-lbl" x="420" y="548">ANTARTICAN OCEAN</text>
-          <g class="land founder" data-id="bbo">
-            <path d="M150,468 Q260,438 420,448 T700,442 Q830,436 900,462 L905,500 Q760,530 560,522 T220,516 Q140,502 150,468 Z"/>
-            <text x="480" y="492" text-anchor="middle">U.A.P.R. · BBO</text>
-          </g>
-          <g class="land founder" data-id="fefoce">
-            <path d="M285,190 Q340,168 430,178 Q520,186 560,225 Q575,262 540,296 Q460,330 380,312 Q300,296 280,250 Q272,214 285,190 Z"/>
-            <text x="420" y="252" text-anchor="middle">UNITED FEDERATION OF FEFOCE</text>
-          </g>
-          <g class="land" data-id="euthesea">
-            <path d="M235,62 Q330,38 445,52 Q500,66 492,102 Q470,136 380,140 Q280,144 240,120 Q222,90 235,62 Z"/>
-            <text x="365" y="100" text-anchor="middle">FEDERAL UNION OF EUTHESIA</text>
-          </g>
-          <g class="land" data-id="ekranin">
-            <path d="M762,48 Q850,30 940,52 Q965,76 950,108 Q900,140 820,132 Q760,120 750,88 Q752,62 762,48 Z"/>
-            <text x="855" y="90" text-anchor="middle">EKRANIN CONTINENT</text>
-          </g>
-          <g class="land" data-id="treganno">
-            <path d="M520,64 Q600,50 680,66 Q705,88 690,112 Q630,132 555,124 Q515,110 510,88 Q512,70 520,64 Z"/>
-            <text x="605" y="98" text-anchor="middle">TREGANNOOCCA</text>
-          </g>
-          <g class="land" data-id="northia">
-            <path d="M62,72 Q120,50 185,64 Q212,86 198,116 Q150,142 95,132 Q58,118 55,94 Q56,80 62,72 Z"/>
-            <text x="132" y="102" text-anchor="middle">NORTHIA</text>
-          </g>
-          <g class="land" data-id="euret">
-            <path d="M85,205 Q150,185 225,200 Q252,225 238,258 Q180,288 118,278 Q78,262 74,232 Q76,214 85,205 Z"/>
-            <text x="160" y="243" text-anchor="middle">EURET FEDERAL REPUBLIC</text>
-          </g>
-          <g class="land" data-id="salvoria">
-            <path d="M782,185 Q850,170 920,190 Q945,220 928,255 Q870,285 810,272 Q770,258 765,222 Q770,196 782,185 Z"/>
-            <text x="855" y="230" text-anchor="middle">SALVORIA</text>
-          </g>
-          <g class="land" data-id="lehnta">
-            <path d="M700,150 Q740,140 775,156 Q788,178 770,198 Q728,208 700,192 Q688,168 700,150 Z"/>
-            <text x="740" y="180" text-anchor="middle">LEHNTA</text>
-          </g>
-          <g class="land" data-id="arden">
-            <path d="M765,352 Q830,335 890,352 Q915,382 898,415 Q840,442 780,428 Q745,410 742,380 Q750,362 765,352 Z"/>
-            <text x="828" y="392" text-anchor="middle">ARDEN</text>
-          </g>
-          <g class="land" data-id="mediyesia">
-            <path d="M525,368 Q600,350 680,366 Q708,392 694,424 Q620,448 555,434 Q515,416 512,392 Q516,376 525,368 Z"/>
-            <text x="605" y="402" text-anchor="middle">MEDIYESIA</text>
-          </g>
-          <!-- compass -->
-          <g class="compass" transform="translate(936,268)">
-            <circle r="26" fill="none" stroke="rgba(168,212,238,.35)" stroke-width="1"/>
-            <path d="M0,-24 L6,0 L0,24 L-6,0 Z" fill="rgba(255,140,26,.8)"/>
-            <text y="-32" text-anchor="middle" fill="rgba(168,212,238,.6)" font-family="IBM Plex Mono" font-size="11">N</text>
-          </g>
-        </svg>
-        <div class="map-note">SCHEMATIC MAP · 示意图（手绘原版见档案 No.01）</div>
-      </div>
-
-      <aside class="map-panel" id="mapPanel">
-        <div class="mp-tag" id="mpTag">FOUNDING NATION · 创始国</div>
-        <h3 id="mpName">BBO 极地共和国联邦</h3>
-        <div class="mp-en" id="mpEn">U.A.P.R. — UNION OF ANTARTICAN POLAR REPUBLIC</div>
-        <dl>
-          <dt>元首 PLAYER</dt><dd>Dash（创始人 / 主创）</dd>
-          <dt>地理原型</dt><dd>平行世界的南极大陆</dd>
-          <dt>国家图腾</dt><dd>🐧 企鹅</dd>
-          <dt>国土地貌</dt><dd>60% 冰原 · 巨大山脉 · 岩丘平原 · 针叶林带</dd>
-          <dt>状态 STATUS</dt><dd><span class="pill done">创始国 · 活跃</span></dd>
-        </dl>
-        <div class="mp-desc" id="mpDesc">
-          Dash 以南极洲为原型亲手创造的国家：六成国土被冰雪覆盖，巨大山脉贯穿内陆，
-          中纬度地区分布着岩石丘陵、平原、湖泊与针叶林。企鹅被选为国家标志 ——
-          在寒冷的最南端，这个国家安静而坚韧地观察着整个世界。
-        </div>
-        <div class="mp-cta"><a href="#join">申请在这片大陆建立你的国家 →</a></div>
-      </aside>
-    </div>
-
-    <div class="nations-table rv">
-      <table class="ruski">
-        <thead><tr><th>国家 / 大陆</th><th>英文注册名</th><th>归属</th><th>备注</th><th>状态</th></tr></thead>
-        <tbody>
-          <tr><td><b>BBO 极地共和国联邦</b></td><td><span class="en">U.A.P.R. · Union of Antartican Polar Republic</span></td><td>Dash（创始人）</td><td>南极原型 · 企鹅图腾 · 60% 冰原</td><td><span class="pill done">创始国 · 活跃</span></td></tr>
-          <tr><td><b>费福斯联邦</b></td><td><span class="en">United Federation of Fefoce</span></td><td>Calvin（创始人）</td><td>超级大国 · 体量对标美国 · 盟约网络</td><td><span class="pill done">创始国 · 活跃</span></td></tr>
-          <tr><td><b>尤塞亚共和国</b></td><td><span class="en">Republic of Euthesea</span></td><td>东方阵营</td><td>超级大国 · 体量对标苏联</td><td><span class="pill done">阵营核心</span></td></tr>
-          <tr><td>埃克拉宁大陆</td><td><span class="en">Ekranin Continent</span></td><td>—</td><td>东北方大陆</td><td><span class="pill open">开放认领</span></td></tr>
-          <tr><td>特雷加努卡</td><td><span class="en">Tregannoocca</span></td><td>—</td><td>北方大陆</td><td><span class="pill open">开放认领</span></td></tr>
-          <tr><td>萨尔沃里亚</td><td><span class="en">Salvoria</span></td><td>—</td><td>东方多行政区大陆</td><td><span class="pill open">开放认领</span></td></tr>
-          <tr><td>伦塔</td><td><span class="en">Lehnta</span></td><td>—</td><td>东方次大陆</td><td><span class="pill open">开放认领</span></td></tr>
-          <tr><td>诺西亚</td><td><span class="en">Northia</span></td><td>—</td><td>极西北大陆</td><td><span class="pill open">开放认领</span></td></tr>
-          <tr><td>尤雷特联邦共和国</td><td><span class="en">Euret Federal Republic</span></td><td>—</td><td>西方大陆</td><td><span class="pill open">开放认领</span></td></tr>
-          <tr><td>阿登</td><td><span class="en">Arden</span></td><td>—</td><td>东南大陆</td><td><span class="pill open">开放认领</span></td></tr>
-          <tr><td>梅迪耶西亚</td><td><span class="en">Mediyesia</span></td><td>—</td><td>南方群岛大陆</td><td><span class="pill open">开放认领</span></td></tr>
-          <tr><td><b>你的国家？</b></td><td><span class="en">Your Nation — To Be Registered</span></td><td>未来的你</td><td>认领现存大陆，或提案新增版图（地图将随版本扩展）</td><td><span class="pill prog">等待元首</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 05 JOIN ================= -->
-<section id="join">
-  <div class="container">
-    <div class="sec-head rv">
-      <div class="sec-no">SECTION 05 · JOIN THE WORLD</div>
-      <h2>加入共建：成为这个世界的一名 Player</h2>
-      <p class="sec-lead">RUSKI 的世界因参与者而生长。无论你想治国、画装备、写编年史还是纵横外交 —— 这里都有你的位置。</p>
-    </div>
-
-    <div class="steps rv">
-      <div class="step">
-        <h4>领取领土</h4>
-        <p>在国家图鉴中认领一块现存大陆，或向创始议会提案新增版图 —— 世界地图已迭代六版，每一版都欢迎新的疆域。</p>
-        <span class="k">TERRITORY CLAIM</span>
-      </div>
-      <div class="step">
-        <h4>设计国家身份</h4>
-        <p>创作原创国旗（下方「国旗设计台」可直接出图）、确定政体与国策，国歌可选 —— 这是你的国家，由你定义。</p>
-        <span class="k">NATION IDENTITY</span>
-      </div>
-      <div class="step">
-        <h4>宣誓社区宪章</h4>
-        <p>承认诚实原则与推演规则：像政治家一样思考，不搞无脑战争 —— 在 RUSKI，鲁莽的开战者会被联军覆灭。</p>
-        <span class="k">THE CHARTER</span>
-      </div>
-      <div class="step">
-        <h4>开始外交与建设</h4>
-        <p>贸易、结盟、谈判、军备设计、历史事件推演……你的每一个决定都会写进世界编年史。</p>
-        <span class="k">PLAY & BUILD</span>
-      </div>
-    </div>
-
-    <div class="roles rv">
-      <h3>PLAYER ROLES · 玩家角色</h3>
-      <table class="ruski">
-        <thead><tr><th>角色</th><th>职责</th><th>适合谁</th><th>产出物</th></tr></thead>
-        <tbody>
-          <tr><td><b>国家元首</b><span class="en">Head of State</span></td><td>治理国家、制定国策、参与外交与战争推演</td><td>热爱地缘政治与国际新闻的玩家</td><td>国策文件 · 外交记录</td></tr>
-          <tr><td><b>军备设计师</b><span class="en">Weapons Designer</span></td><td>为宇宙设计原创装备：坦克、战机、载具设定图</td><td>军事迷 · 美术与工程设计爱好者</td><td>装备设定图（如 K‑1A）</td></tr>
-          <tr><td><b>外交官</b><span class="en">Diplomat</span></td><td>结盟谈判、条约起草、危机斡旋</td><td>善辩与共情的沟通者</td><td>条约 · 联盟公告</td></tr>
-          <tr><td><b>史官</b><span class="en">Chronicler</span></td><td>记录每一轮推演，编纂世界编年史</td><td>写作者 · 世界观设定控</td><td>编年史 · 设定集</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="flag-lab rv">
-      <div class="flag-controls">
-        <div class="lab-title" style="margin-top:0">FLAG LAB · 国旗设计台</div>
-        <div class="fc">
-          <label>国家名称 NATION NAME</label>
-          <input type="text" id="fnName" maxlength="24" placeholder="例：BBO 极地共和国联邦" value="BBO 极地共和国联邦">
-        </div>
-        <div class="fc">
-          <label>旗面布局 PATTERN</label>
-          <select id="fnPattern">
-            <option value="tricolorH">横三色带（经典共和）</option>
-            <option value="tricolorV">竖三色带（联邦式）</option>
-            <option value="diagonal">对角分割（进取型）</option>
-            <option value="polar">极地式（上天下冰原）</option>
-          </select>
-        </div>
-        <div class="fc">
-          <label>旗色 COLORS</label>
-          <div class="color-row">
-            <div class="sw"><input type="color" id="fnC1" value="#4a8fe0" title="主色"></div>
-            <div class="sw"><input type="color" id="fnC2" value="#ff8c1a" title="副色"></div>
-            <div class="sw"><input type="color" id="fnC3" value="#f2e9d3" title="第三色"></div>
-          </div>
-        </div>
-        <div class="fc">
-          <label>国徽 EMBLEM</label>
-          <select id="fnEmblem">
-            <option value="star">★ 五角星</option>
-            <option value="penguin">🐧 企鹅（BBO 同款）</option>
-            <option value="crescent">☾ 新月</option>
-            <option value="mountain">▲ 山峰</option>
-            <option value="ring">◉ 圆环</option>
-            <option value="bolt">⚡ 闪电</option>
-            <option value="none">无徽记</option>
-          </select>
-        </div>
-        <div class="apply-actions" style="margin-top:6px">
-          <button class="btn btn-solid" id="flagDl">下载原图 PNG ↓</button>
-        </div>
-      </div>
-      <div class="flag-preview">
-        <canvas id="flagCanvas" width="840" height="560"></canvas>
-        <div class="flag-name" id="flagLabel">BBO 极地共和国联邦 · 临时国旗草案</div>
-      </div>
-    </div>
-
-    <div class="apply-box rv">
-      <div class="apply-title">DIPLOMATIC NOTE · 入籍申请书生成器</div>
-      <div class="apply-grid">
-        <div class="fc">
-          <label>你的名字 PLAYER NAME</label>
-          <input type="text" id="apName" maxlength="20" placeholder="例：Alex">
-        </div>
-        <div class="fc">
-          <label>你的国家 NATION</label>
-          <input type="text" id="apNation" maxlength="30" placeholder="例：诺西亚联邦">
-        </div>
-        <div class="fc">
-          <label>领土主张 TERRITORY</label>
-          <select id="apLand">
-            <option>埃克拉宁大陆 Ekranin</option>
-            <option>特雷加努卡 Tregannoocca</option>
-            <option>萨尔沃里亚 Salvoria</option>
-            <option>伦塔 Lehnta</option>
-            <option>诺西亚 Northia</option>
-            <option>尤雷特 Euret</option>
-            <option>阿登 Arden</option>
-            <option>梅迪耶西亚 Mediyesia</option>
-            <option>提案新增版图 New Territory</option>
-          </select>
-        </div>
-        <div class="fc">
-          <label>政体 GOVERNANCE</label>
-          <select id="apGov">
-            <option>联邦共和国</option>
-            <option>君主立宪</option>
-            <option>议会民主</option>
-            <option>城邦联盟</option>
-            <option>极地公社</option>
-          </select>
-        </div>
-        <div class="fc" style="grid-column:1/-1">
-          <label>国家格言 MOTTO（一句话）</label>
-          <input type="text" id="apMotto" maxlength="40" placeholder="例：寒冷塑造坚韧">
-        </div>
-      </div>
-      <div class="apply-actions">
-        <button class="btn btn-solid" id="apGen">生成申请书 →</button>
-        <button class="btn btn-ghost" id="apCopy" style="display:none">复制文本</button>
-        <button class="btn btn-ghost" id="apDl" style="display:none">下载 .txt</button>
-      </div>
-      <div id="applyOut"></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 06 CHARTER ================= -->
-<section id="charter">
-  <div class="container">
-    <div class="sec-head rv">
-      <div class="sec-no">SECTION 06 · THE CHARTER</div>
-      <h2>社区宪章：创始人的梦想与价值观</h2>
-      <p class="sec-lead">这些不是写在墙上的口号，而是四位创始人在四年推演中<b>亲手验证过的游戏哲学</b>。加入 RUSKI，即意味着认同它们。</p>
-    </div>
-
-    <div class="charter-grid">
-      <div class="ch-card rv" data-no="I">
-        <span class="ch-ico">🤝</span>
-        <h4>诚实至上</h4><span class="en">HONESTY FIRST</span>
-        <p>作弊是对所有玩家想象力的背叛。创始档案明确记载：幸运的是，四年以来从未发生。—— 我们希望永远如此。</p>
-      </div>
-      <div class="ch-card rv d1" data-no="II">
-        <span class="ch-ico">♟</span>
-        <h4>像政治家一样思考</h4><span class="en">THINK LIKE A STATESMAN</span>
-        <p>国家利益是最高目标，但绝不是无脑开战 —— 在 RUSKI 的历史里，为好玩而贸然开战的国家，都被联军送进了历史书。</p>
-      </div>
-      <div class="ch-card rv d2" data-no="III">
-        <span class="ch-ico">📜</span>
-        <h4>人人书写历史</h4><span class="en">EVERY PLAYER IS A NATION</span>
-        <p>每个玩家都是一颗行星。世界不属于任何单一作者 —— 它由所有参与者的决定共同喂养、共同生长。</p>
-      </div>
-      <div class="ch-card rv d3" data-no="IV">
-        <span class="ch-ico">🧭</span>
-        <h4>从现实学习，向未来推演</h4><span class="en">LEARN FROM REALITY</span>
-        <p>以最新政治新闻与真实战略知识为蓝本，在架空时间线中推演另一种可能 —— 理解现实世界，是玩好 RUSKI 的必修课。</p>
-      </div>
-      <div class="ch-card rv d4" data-no="V">
-        <span class="ch-ico">⭐</span>
-        <h4>成长的共同纪念</h4><span class="en">A MEMORY WE GROW INTO</span>
-        <p>Dash 在手稿结尾写道：希望 RUSKI 持续发展下去，成为我们长大后共同的美好回忆。—— 这就是这个宇宙存在的初心。</p>
-      </div>
-    </div>
-
-    <div class="founder-quotes">
-      <div class="fq rv">
-        <i>"希望这个世界继续发展下去 —— 长大后，它会成为我们一起创造的、最美好的回忆。"</i>
-        <div class="who">DASH <span class="role">· 创始人 / 世界观主创 / BBO 元首</span></div>
-      </div>
-      <div class="fq rv d1">
-        <i>"靠他国交战、出口军火、吸纳逃亡财富而致富 —— 这很邪恶，不是吗？但坦率地说，它确实有效。"</i>
-        <div class="who">CALVIN <span class="role">· 联合创始人 / 平行宇宙主笔 / Fefoce 元首</span></div>
-      </div>
-    </div>
-
-    <div class="gov rv">
-      <div class="gov-card">
-        <h5>版本迭代制</h5>
-        <p>世界地图已迭代 6 版。任何玩家都可向创始议会提案扩展版图、新增设定 —— 通过即并入正史，世界随社区生长。</p>
-      </div>
-      <div class="gov-card">
-        <h5>事件推演制</h5>
-        <p>定期发起历史事件推演（战争、危机、科技突破），全体玩家参与决策，结果由史官写入编年史，不可回滚。</p>
-      </div>
-      <div class="gov-card">
-        <h5>创始议会</h5>
-        <p>Dash · Calvin · Jacky · Edison 四位创始人组成议会，负责世界观守门、争议裁决与新玩家建交 —— 议会也由社区监督。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 07 ROADMAP ================= -->
-<section id="roadmap">
-  <div class="container">
-    <div class="sec-head rv">
-      <div class="sec-no">SECTION 07 · ROADMAP</div>
-      <h2>路线图：让世界自己生长</h2>
-      <p class="sec-lead">线上化只是起点。RUSKI 的终极目标，是成为一个<b>由社区自主运转、跨越少年时代的平行世界</b>。</p>
-    </div>
-    <div class="works-table rv">
-      <table class="ruski roadmap-table">
-        <thead><tr><th>阶段</th><th>里程碑</th><th>说明</th><th>状态</th></tr></thead>
-        <tbody>
-          <tr><td><b class="y">2026</b></td><td><b>官网 v1 上线 · 世界档案库</b></td><td>本网站：世界观、发展历史、档案库、国家图鉴与共建入口全部上线</td><td><span class="pill prog">进行中 · 你正在看它</span></td></tr>
-          <tr><td><b class="y">2026</b></td><td>手稿全面数字化</td><td>5 大本手绘档案高精度扫描归档，陆续公开</td><td><span class="pill prog">进行中</span></td></tr>
-          <tr><td><b class="y">2027</b></td><td>玩家国家注册系统</td><td>全球玩家在线建交：注册国家、上传国旗、认领版图</td><td><span class="pill open">规划中</span></td></tr>
-          <tr><td><b class="y">2027</b></td><td>交互式世界地图 v7</td><td>可缩放、可编辑的在线地图，玩家版图实时更新</td><td><span class="pill open">规划中</span></td></tr>
-          <tr><td><b class="y">2028</b></td><td>多人事件推演平台 + 编年史年刊</td><td>线上推演引擎与年度出版计划</td><td><span class="pill open">远期</span></td></tr>
-          <tr><td><b class="y">∞</b></td><td><b>一个自主生长的世界</b></td><td>当创始人们长大，RUSKI 仍在生长 —— 由一代代玩家接力</td><td><span class="pill done">我们的梦想</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div style="text-align:center;margin-top:70px" class="rv">
-      <div class="hand" style="font-size:clamp(24px,3.4vw,38px);color:var(--paper);margin-bottom:26px">
-        这个世界已经等了你四年 —— 现在，轮到你执笔了。
-      </div>
-      <a class="btn btn-solid" href="#join">申请建交 · 加入 RUSKI</a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FOOTER ================= -->
 <footer>
-  <div class="container">
-    <div class="foot-grid">
-      <div>
-        <div class="foot-logo">RUSKI<span>.</span>CORP</div>
-        <div class="foot-meta">
-          一个从纸上生长出来的科幻地缘政治宇宙<br>
-          由 Dash 与 Calvin · Jacky · Edison 于 2022 年共同创立<br>
-          世界地图 v6 · 16+ 玩家国家 · 持续生长中
-        </div>
-      </div>
-      <div class="foot-right">
-        <b>RUSKI ONLINE INITIATIVE</b><br>
-        本站为 RUSKI 线上化计划 v1<br>
-        所有手稿版权归 RUSKI 创始团队所有<br>
-        世界观内容纯属虚构 · FICTIONAL UNIVERSE
-      </div>
-    </div>
-    <div class="copy">
-      <span>© 2022–<span id="yr">2026</span> RUSKI CORPORATION</span>
-      <span>DESIGNED WITH ★ FOR EVERY PLAYER</span>
-    </div>
+  <div class="wrap">
+    <h3>RUSKI</h3>
+    <p>Built since 2022 by Dash and Calvin, with Jack, Edison and Renhai at the beginning. More than twenty nations, five industries and four years of drawing, all invented between lessons.</p>
+    <p>Nothing here was commissioned. Nothing here was finished. The door is open.</p>
+    <div class="line">A world built on paper · <span>2022–2026</span></div>
   </div>
 </footer>
 
-<!-- lightbox -->
-<div class="lb" id="lb">
-  <button class="lb-close" id="lbClose" aria-label="关闭">×</button>
-  <button class="lb-btn lb-prev" id="lbPrev" aria-label="上一张">‹</button>
-  <img id="lbImg" src="" alt="">
-  <div class="lb-cap" id="lbCap"></div>
-  <button class="lb-btn lb-next" id="lbNext" aria-label="下一张">›</button>
+<!-- ============ LIGHTBOX ============ -->
+<div id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <div class="x" id="lbX">✕</div>
+  <div class="p" id="lbP">←</div>
+  <div class="n" id="lbN">→</div>
+  <img id="lbImg" alt="">
+  <div class="cap" id="lbCap"></div>
 </div>
 
 <script>
-/* ============ ticker ============ */
 (function(){
-  const items = ['FAELIAN OCEAN','UNITED FEDERATION OF FEFOCE','REPUBLIC OF EUTHESEA','U.A.P.R. BBO','EKRANIN CONTINENT','SALVORIA','NORTHIA','BARKAM 1980','NO NUCLEAR WORLD','ISE 2013.8.17','K-1A MBT','MAP V6','16 PLAYERS','EST. 2022'];
-  const t = document.getElementById('ticker');
-  let html = '';
-  for(let r=0;r<2;r++) items.forEach(x=>html += `<span><b>★</b>${x}</span>`);
-  t.innerHTML = html;
-})();
+  /* ---------- lightbox ---------- */
+  var items = Array.prototype.slice.call(document.querySelectorAll('[data-full]'));
+  var lb = document.getElementById('lb'),
+      lbImg = document.getElementById('lbImg'),
+      lbCap = document.getElementById('lbCap'),
+      idx = 0;
 
-/* ============ nav ============ */
-(function(){
-  const nav = document.getElementById('nav');
-  const links = [...document.querySelectorAll('.nav-links a')];
-  const secs = links.map(a=>document.querySelector(a.getAttribute('href')));
-  let lastY = 0;
-  window.addEventListener('scroll',()=>{
-    const y = scrollY;
-    nav.classList.toggle('hide', y>140 && y>lastY);
-    lastY = y;
-    let cur = -1;
-    secs.forEach((s,i)=>{ if(s && s.getBoundingClientRect().top < 180) cur = i; });
-    links.forEach((a,i)=>a.classList.toggle('active', i===cur));
-  },{passive:true});
-})();
-
-/* ============ reveal ============ */
-(function(){
-  const io = new IntersectionObserver(es=>es.forEach(e=>{
-    if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); }
-  }),{threshold:.12});
-  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-})();
-
-/* ============ counters ============ */
-(function(){
-  const io = new IntersectionObserver(es=>es.forEach(e=>{
-    if(!e.isIntersecting) return;
-    const el = e.target, target = +el.dataset.count, plus = el.dataset.plus||'';
-    const t0 = performance.now(), dur = 1400;
-    (function tick(t){
-      const p = Math.min((t-t0)/dur,1), ease = 1-Math.pow(1-p,3);
-      el.textContent = Math.round(target*ease).toLocaleString()+plus;
-      if(p<1) requestAnimationFrame(tick);
-    })(t0);
-    io.unobserve(el);
-  }),{threshold:.6});
-  document.querySelectorAll('[data-count]').forEach(el=>io.observe(el));
-})();
-
-/* ============ lightbox ============ */
-(function(){
-  const items = [...document.querySelectorAll('.gal-item')];
-  const lb = document.getElementById('lb'), img = document.getElementById('lbImg'), cap = document.getElementById('lbCap');
-  let idx = 0;
   function show(i){
-    idx = (i+items.length)%items.length;
-    const it = items[idx];
-    img.src = it.querySelector('img').src;
-    cap.innerHTML = `<b>${it.dataset.cap}</b><span>${it.dataset.sub}</span>`;
+    if(i < 0) i = items.length - 1;
+    if(i >= items.length) i = 0;
+    idx = i;
+    var el = items[i];
+    lbImg.src = el.getAttribute('data-full');
+    lbImg.alt = (el.querySelector('img') && el.querySelector('img').alt) || '';
+    lbCap.textContent = el.getAttribute('data-cap') || '';
+    lb.classList.add('on');
+    document.body.style.overflow = 'hidden';
   }
-  items.forEach((it,i)=>it.addEventListener('click',()=>{ show(i); lb.classList.add('open'); document.body.style.overflow='hidden'; }));
-  function close(){ lb.classList.remove('open'); document.body.style.overflow=''; }
-  document.getElementById('lbClose').onclick = close;
-  document.getElementById('lbPrev').onclick = e=>{ e.stopPropagation(); show(idx-1); };
-  document.getElementById('lbNext').onclick = e=>{ e.stopPropagation(); show(idx+1); };
-  lb.addEventListener('click',e=>{ if(e.target===lb) close(); });
-  document.addEventListener('keydown',e=>{
-    if(!lb.classList.contains('open')) return;
-    if(e.key==='Escape') close();
-    if(e.key==='ArrowLeft') show(idx-1);
-    if(e.key==='ArrowRight') show(idx+1);
-  });
-})();
-
-/* ============ world map ============ */
-(function(){
-  const NATIONS = {
-    bbo:{tag:'FOUNDING NATION · 创始国',name:'BBO 极地共和国联邦',en:'U.A.P.R. — UNION OF ANTARTICAN POLAR REPUBLIC',
-      rows:[['元首 PLAYER','Dash（创始人 / 主创）'],['地理原型','平行世界的南极大陆'],['国家图腾','🐧 企鹅'],['国土地貌','60% 冰原 · 巨大山脉 · 针叶林带'],['状态','<span class="pill done">创始国 · 活跃</span>']],
-      desc:'Dash 以南极洲为原型亲手创造的国家：六成国土被冰雪覆盖，巨大山脉贯穿内陆，中纬度地区分布着岩石丘陵、平原、湖泊与针叶林。企鹅被选为国家标志 —— 在寒冷的最南端，这个国家安静而坚韧地观察着整个世界。'},
-    fefoce:{tag:'FOUNDING NATION · 创始国',name:'费福斯联邦',en:'UNITED FEDERATION OF FEFOCE',
-      rows:[['元首 PLAYER','Calvin（联合创始人）'],['体量定位','超级大国 · 对标美国'],['战略风格','盟约网络 · 联盟分化 · 贸易施压'],['阵营','西方阵营核心'],['状态','<span class="pill done">创始国 · 活跃</span>']],
-      desc:'Calvin 的国家，RUSKI 世界的两极之一。手稿记载其战略哲学：组建军事联盟孤立对手、以制裁与「威胁幻觉」消耗对手财力、以政策刺激本国贸易 —— 像政治家一样，把盟友与对手都变成棋盘上的变量。'},
-    euthesea:{tag:'SUPERPOWER · 超级大国',name:'尤塞亚共和国',en:'REPUBLIC OF EUTHESEA',
-      rows:[['体量定位','超级大国 · 对标苏联'],['战略风格','大陆体量 · 集权动员'],['阵营','东方阵营核心'],['状态','<span class="pill done">阵营核心</span>']],
-      desc:'RUSKI 世界的另一极。与 Fefoce 的冷战式对峙贯穿整部编年史：从 1980 年 Barkam 危机到禁核条约，再到 2013 年太空电梯时代的战略再平衡 —— 两极格局是这个宇宙一切故事的主轴。'},
-    ekranin:{tag:'OPEN FOR CLAIM · 开放认领',name:'埃克拉宁大陆',en:'EKRANIN CONTINENT',
-      rows:[['位置','世界东北方'],['现有设定','独立大陆 · 待写入历史'],['状态','<span class="pill open">等待新元首</span>']],
-      desc:'第六版地图上的东北方大陆，尚未被任何玩家认领 —— 它的历史、国旗与政体，正等待第一位元首来书写。'},
-    treganno:{tag:'OPEN FOR CLAIM · 开放认领',name:'特雷加努卡',en:'TREGANNOOCCA',
-      rows:[['位置','世界北方'],['现有设定','北方大陆 · 待写入历史'],['状态','<span class="pill open">等待新元首</span>']],
-      desc:'北方大陆，正对 Euthesia 与 Ekranin 之间的战略水道 —— 谁认领这里，谁就扼住北方航线的咽喉。'},
-    northia:{tag:'OPEN FOR CLAIM · 开放认领',name:'诺西亚',en:'NORTHIA',
-      rows:[['位置','极西北方'],['现有设定','极西北大陆 · 待写入历史'],['状态','<span class="pill open">等待新元首</span>']],
-      desc:'极西北的大陆，名字里就写着「北方」。远离两极冲突的中心 —— 适合一个偏爱和平发展路线的新国家。'},
-    euret:{tag:'OPEN FOR CLAIM · 开放认领',name:'尤雷特联邦共和国',en:'EURET FEDERAL REPUBLIC',
-      rows:[['位置','世界西方'],['现有设定','联邦制大陆国家 · 待写入历史'],['状态','<span class="pill open">等待新元首</span>']],
-      desc:'西方大陆，「联邦共和国」之名已写进地图 —— 但它由多少个州组成、奉行何种国策，全由未来的元首决定。'},
-    salvoria:{tag:'OPEN FOR CLAIM · 开放认领',name:'萨尔沃里亚',en:'SALVORIA',
-      rows:[['位置','世界东方'],['现有设定','多行政区大陆 · 内部边界细密'],['状态','<span class="pill open">等待新元首</span>']],
-      desc:'手稿原图中内部边界最细密的大陆之一 —— 天生适合一个由多个行省、城邦或玩家小队组成的松散共同体。'},
-    lehnta:{tag:'OPEN FOR CLAIM · 开放认领',name:'伦塔',en:'LEHNTA',
-      rows:[['位置','东方次大陆'],['现有设定','次级大陆 · 待写入历史'],['状态','<span class="pill open">等待新元首</span>']],
-      desc:'体量较小的东方次大陆，紧邻 Salvoria —— 小国有小国的活法：在大国之间左右逢源，或是死守中立。'},
-    arden:{tag:'OPEN FOR CLAIM · 开放认领',name:'阿登',en:'ARDEN',
-      rows:[['位置','世界东南方'],['现有设定','南方大陆 · 待写入历史'],['状态','<span class="pill open">等待新元首</span>']],
-      desc:'东南方大陆，面朝 Antartican 大洋 —— 南半球的战略纵深，或是远洋贸易的起点。'},
-    mediyesia:{tag:'OPEN FOR CLAIM · 开放认领',name:'梅迪耶西亚',en:'MEDIYESIA',
-      rows:[['位置','南方群岛带'],['现有设定','群岛型大陆 · 待写入历史'],['状态','<span class="pill open">等待新元首</span>']],
-      desc:'南方群岛大陆，名字自带千岛气质 —— 适合海洋文明、航运帝国，或一群不想依附任何超级大小的岛国联盟。'}
-  };
-  const panel = {
-    tag:document.getElementById('mpTag'), name:document.getElementById('mpName'),
-    en:document.getElementById('mpEn'), desc:document.getElementById('mpDesc'),
-    dl:document.querySelector('#mapPanel dl')
-  };
-  const lands = document.querySelectorAll('#worldMap .land');
-  function select(g){
-    lands.forEach(l=>l.classList.remove('sel'));
-    g.classList.add('sel');
-    const d = NATIONS[g.dataset.id]; if(!d) return;
-    panel.tag.textContent = d.tag;
-    panel.name.textContent = d.name;
-    panel.en.textContent = d.en;
-    panel.desc.textContent = d.desc;
-    panel.dl.innerHTML = d.rows.map(r=>`<dt>${r[0]}</dt><dd>${r[1]}</dd>`).join('');
+  function hide(){
+    lb.classList.remove('on');
+    lbImg.removeAttribute('src');
+    document.body.style.overflow = '';
   }
-  lands.forEach(g=>{ g.addEventListener('click',()=>select(g)); });
-  select(document.querySelector('#worldMap .land[data-id="bbo"]'));
-})();
+  items.forEach(function(el, i){
+    el.addEventListener('click', function(e){
+      if(el.tagName === 'VIDEO') return;
+      e.preventDefault();
+      show(i);
+    });
+  });
+  document.getElementById('lbX').addEventListener('click', hide);
+  document.getElementById('lbP').addEventListener('click', function(){ show(idx-1); });
+  document.getElementById('lbN').addEventListener('click', function(){ show(idx+1); });
+  lb.addEventListener('click', function(e){ if(e.target === lb) hide(); });
+  document.addEventListener('keydown', function(e){
+    if(!lb.classList.contains('on')) return;
+    if(e.key === 'Escape') hide();
+    if(e.key === 'ArrowLeft') show(idx-1);
+    if(e.key === 'ArrowRight') show(idx+1);
+  });
 
-/* ============ flag lab ============ */
-(function(){
-  const cv = document.getElementById('flagCanvas'), ctx = cv.getContext('2d');
-  const W = 840, H = 560;
-  const $ = id=>document.getElementById(id);
-  const c1=$('fnC1'), c2=$('fnC2'), c3=$('fnC3'), pat=$('fnPattern'), emb=$('fnEmblem'), name=$('fnName'), label=$('flagLabel');
+  /* ---------- archive filters ---------- */
+  var btns = document.querySelectorAll('.filters button');
+  var figs = document.querySelectorAll('.arch figure');
+  Array.prototype.forEach.call(btns, function(b){
+    b.addEventListener('click', function(){
+      Array.prototype.forEach.call(btns, function(x){ x.classList.remove('on'); });
+      b.classList.add('on');
+      var f = b.getAttribute('data-f');
+      Array.prototype.forEach.call(figs, function(fig){
+        var show = (f === 'all') || fig.classList.contains(f);
+        fig.style.display = show ? '' : 'none';
+      });
+    });
+  });
 
-  function draw(){
-    const A=c1.value, B=c2.value, C=c3.value;
-    ctx.clearRect(0,0,W,H);
-    ctx.fillStyle='#101418'; ctx.fillRect(0,0,W,H);
-    const p = pat.value;
-    if(p==='tricolorH'){
-      ctx.fillStyle=A; ctx.fillRect(0,0,W,H/3);
-      ctx.fillStyle=B; ctx.fillRect(0,H/3,W,H/3);
-      ctx.fillStyle=C; ctx.fillRect(0,2*H/3,W,H/3);
-    } else if(p==='tricolorV'){
-      ctx.fillStyle=A; ctx.fillRect(0,0,W/3,H);
-      ctx.fillStyle=B; ctx.fillRect(W/3,0,W/3,H);
-      ctx.fillStyle=C; ctx.fillRect(2*W/3,0,W/3,H);
-    } else if(p==='diagonal'){
-      ctx.fillStyle=A; ctx.beginPath(); ctx.rect(0,0,W,H); ctx.fill();
-      ctx.fillStyle=B; ctx.beginPath();
-      ctx.moveTo(0,H); ctx.lineTo(W,0); ctx.lineTo(W,H); ctx.closePath(); ctx.fill();
-      ctx.strokeStyle=C; ctx.lineWidth=14; ctx.beginPath(); ctx.moveTo(0,H); ctx.lineTo(W,0); ctx.stroke();
-    } else if(p==='polar'){
-      ctx.fillStyle=A; ctx.fillRect(0,0,W,H*.58);
-      ctx.fillStyle=C; ctx.fillRect(0,H*.58,W,H*.42);
-      ctx.fillStyle=B; ctx.beginPath();
-      ctx.moveTo(0,H*.58);
-      for(let x=0;x<=W;x+=70){ ctx.lineTo(x+35, H*.58 + ((x/70)%2===0? 26:-20)); }
-      ctx.lineTo(W,H*.62); ctx.lineTo(W,H); ctx.lineTo(0,H); ctx.closePath(); ctx.fill();
-    }
-    drawEmblem(emb.value, p);
-    // subtle fabric shading
-    const g = ctx.createLinearGradient(0,0,W,0);
-    g.addColorStop(0,'rgba(255,255,255,.10)'); g.addColorStop(.25,'rgba(255,255,255,0)');
-    g.addColorStop(.75,'rgba(0,0,0,0)'); g.addColorStop(1,'rgba(0,0,0,.18)');
-    ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
-    label.textContent = (name.value.trim()||'未命名国家') + ' · 临时国旗草案';
+  /* ---------- reveal on scroll ---------- */
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('in'); });
   }
-  function emblemPos(p){ return p==='tricolorH'||p==='polar' ? [W/2, H/2, 92] : [W/2, H/2, 92]; }
-  function drawEmblem(e,p){
-    const [cx,cy,r] = emblemPos(p);
-    ctx.save();
-    if(e==='star'){
-      ctx.fillStyle='#f6f1e4'; ctx.beginPath();
-      for(let i=0;i<10;i++){
-        const ang=-Math.PI/2 + i*Math.PI/5, rr=i%2===0?r:r*.42;
-        ctx[i===0?'moveTo':'lineTo'](cx+rr*Math.cos(ang), cy+rr*Math.sin(ang));
-      }
-      ctx.closePath(); ctx.fill();
-    } else if(e==='penguin'){
-      ctx.font='150px serif'; ctx.textAlign='center'; ctx.textBaseline='middle';
-      ctx.fillText('🐧',cx,cy+8);
-    } else if(e==='crescent'){
-      ctx.fillStyle='#f6f1e4'; ctx.beginPath(); ctx.arc(cx,cy,r*.85,0,7); ctx.fill();
-      const cutCol = (pat.value==='tricolorH'||pat.value==='tricolorV') ? c2.value : c1.value;
-      ctx.fillStyle=cutCol; ctx.beginPath(); ctx.arc(cx+r*.42,cy-r*.1,r*.72,0,7); ctx.fill();
-    } else if(e==='mountain'){
-      ctx.fillStyle='#f6f1e4'; ctx.beginPath();
-      ctx.moveTo(cx-r,cy+r*.7); ctx.lineTo(cx-r*.15,cy-r*.75); ctx.lineTo(cx+r*.2,cy-r*.1);
-      ctx.lineTo(cx+r*.45,cy-r*.45); ctx.lineTo(cx+r,cy+r*.7); ctx.closePath(); ctx.fill();
-    } else if(e==='ring'){
-      ctx.strokeStyle='#f6f1e4'; ctx.lineWidth=r*.3; ctx.beginPath(); ctx.arc(cx,cy,r*.62,0,7); ctx.stroke();
-    } else if(e==='bolt'){
-      ctx.fillStyle='#f6f1e4'; ctx.beginPath();
-      ctx.moveTo(cx-r*.35,cy-r); ctx.lineTo(cx+r*.42,cy-r*.25); ctx.lineTo(cx+r*.05,cy-r*.2);
-      ctx.lineTo(cx+r*.4,cy+r); ctx.lineTo(cx-r*.42,cy+r*.1); ctx.lineTo(cx-r*.02,cy+r*.02);
-      ctx.closePath(); ctx.fill();
-    }
-    ctx.restore();
-  }
-  [c1,c2,c3].forEach(el=>el.addEventListener('input',draw));
-  [pat,emb].forEach(el=>el.addEventListener('change',draw));
-  name.addEventListener('input',draw);
-  document.getElementById('flagDl').addEventListener('click',()=>{
-    const a=document.createElement('a');
-    a.download='RUSKI_flag_'+(name.value.trim()||'nation')+'.png';
-    a.href=cv.toDataURL('image/png'); a.click();
-  });
-  draw();
 })();
-
-/* ============ application generator ============ */
-(function(){
-  const $=id=>document.getElementById(id);
-  const out=$('applyOut'); let text='';
-  $('apGen').addEventListener('click',()=>{
-    const nm=$('apName').value.trim()||'（未署名）';
-    const na=$('apNation').value.trim()||'（未命名）';
-    const land=$('apLand').value, gov=$('apGov').value;
-    const motto=$('apMotto').value.trim()||'—';
-    const d=new Date();
-    const date=`${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getDate()).padStart(2,'0')}`;
-    text =
-`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-        RUSKI 入籍申请书
-      DIPLOMATIC APPLICATION · JOIN THE WORLD
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-呈 ：RUSKI 创始议会（Dash · Calvin · Jacky · Edison）
-
-申请人 ：${nm}
-国家名称 ：${na}
-领土主张 ：${land}
-政体     ：${gov}
-国家格言 ：「${motto}」
-
-我已阅读并宣誓遵守《RUSKI 社区宪章》五项原则：
-  I.   诚实至上 —— 不作弊，不背刺档案
-  II.  像政治家一样思考 —— 不做无脑战争
-  III. 人人书写历史 —— 尊重每一位玩家的叙事
-  IV.  从现实学习 —— 以真实政治知识推演
-  V.   成长的共同纪念 —— 让世界持续生长
-
-                    签名：${nm}
-                    日期：${date}
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-本申请书为离线生成。请截图或下载后发送给任意一位创始人，
-即可开启建交流程（在线注册系统将于 2027 年上线）。`;
-    out.textContent=text;
-    out.classList.add('show');
-    $('apCopy').style.display=''; $('apDl').style.display='';
-  });
-  $('apCopy').addEventListener('click',async()=>{
-    try{ await navigator.clipboard.writeText(text); $('apCopy').textContent='已复制 ✓'; }
-    catch(e){ $('apCopy').textContent='请手动选择复制'; }
-    setTimeout(()=>$('apCopy').textContent='复制文本',1800);
-  });
-  $('apDl').addEventListener('click',()=>{
-    const blob=new Blob([text],{type:'text/plain;charset=utf-8'});
-    const a=document.createElement('a');
-    a.href=URL.createObjectURL(blob);
-    a.download='RUSKI_入籍申请书_'+($('apName').value.trim()||'player')+'.txt';
-    a.click(); URL.revokeObjectURL(a.href);
-  });
-})();
-
-document.getElementById('yr').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
