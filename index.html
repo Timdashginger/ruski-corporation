@@ -202,6 +202,19 @@ section{padding:96px 0}
 .ms-thumbs figcaption{font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);padding:6px 2px 0}
 @media(max-width:900px){.manifesto{grid-template-columns:1fr;gap:30px}}
 
+/* ---------- testimony teaser ---------- */
+#testimony{background:var(--paper2);border-top:1px solid #d7cbb0;border-bottom:1px solid #d7cbb0;padding:60px 0}
+.tst{display:grid;grid-template-columns:210px 1fr;gap:44px;align-items:start}
+.tst-img{margin:0;background:#fff;padding:9px 9px 20px;box-shadow:0 16px 36px rgba(50,42,26,.2);transform:rotate(-2.4deg);cursor:zoom-in;transition:.35s}
+.tst-img:hover{transform:rotate(0deg) translateY(-3px);box-shadow:0 22px 44px rgba(50,42,26,.28)}
+.tst-img img{width:100%;display:block}
+.tst-body .eyebrow{margin-bottom:16px}
+.tst-q{font-family:var(--serif);font-size:clamp(19px,2.4vw,26px);line-height:1.5;color:#1e2732;margin:0 0 16px;border-left:3px solid var(--red);padding-left:20px}
+.tst-close{font-family:var(--serif);font-style:italic;font-size:15.5px;line-height:1.62;color:#5d6772;margin:0 0 20px;padding-left:23px}
+.tst-link{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);border-bottom:1px solid rgba(168,35,43,.45);padding:0 0 3px 23px;display:inline-block;transition:.2s}
+.tst-link:hover{color:var(--ink);border-color:var(--ink)}
+@media(max-width:760px){.tst{grid-template-columns:1fr;gap:28px}.tst-img{max-width:170px}}
+
 /* ---------- evolution ---------- */
 #evolution{background:var(--ink2);color:#e9eef4}
 #evolution .shead p{color:rgba(233,238,244,.6)}
@@ -375,6 +388,23 @@ footer a{color:var(--amber)}
 
   <div class="ticker"><span>&nbsp;·&nbsp; FROM A BOTTLE OF VODKA TO A CARRIER &nbsp;·&nbsp; TWENTY NATIONS, THREE OCEANS &nbsp;·&nbsp; A COMPLETE WORLD, DRAWN BY HAND &nbsp;·&nbsp; TWO FOUNDERS, FOUR YEARS &nbsp;·&nbsp; FROM A BOTTLE OF VODKA TO A CARRIER &nbsp;·&nbsp; TWENTY NATIONS, THREE OCEANS &nbsp;·&nbsp; A COMPLETE WORLD, DRAWN BY HAND &nbsp;·&nbsp; TWO FOUNDERS, FOUR YEARS &nbsp;·&nbsp;</span></div>
 </header>
+
+<!-- ============ TESTIMONY TEASER ============ -->
+<section id="testimony">
+  <div class="wrap">
+    <div class="tst rv">
+      <figure class="tst-img" data-full="assets/manuscript/page-1.jpg" data-cap="Page one of the manuscript Dash wrote at school in 2024.">
+        <img src="assets/manuscript/page-1-t.jpg" alt="Handwritten page of Dash's 2024 manuscript" loading="lazy">
+      </figure>
+      <div class="tst-body">
+        <div class="eyebrow">In his own words — handwritten at school, 2024</div>
+        <blockquote class="tst-q">"It seems like a normal playhouse game, and it seems childish — but I can tell you that when we play this game, we usually base it on the latest political news. The only difference is the setting of the time period."</blockquote>
+        <p class="tst-close">"In summary, RUSKI is not simply that in my mind. The whole project is still developing. I hope it will be a good thing to remember when my friends and I have grown up."</p>
+        <a class="tst-link" href="#manifesto">Read the three-page manuscript ↓</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ============ DISPATCH ============ -->
 <section id="dispatch">
@@ -638,13 +668,13 @@ footer a{color:var(--amber)}
       <div class="fcard f">
         <div class="role">Co-founder · Fefoce</div>
         <h3>Calvin</h3>
-        <div class="nat2">Head of the United Federation of Fefoce</div>
+        <div class="nat2">President of the United Federation of Fefoce</div>
         <p class="q">Left for the United Kingdom in 2024. The day he left, Dash drew him a farewell — and the world kept going, online.</p>
       </div>
       <div class="fcard d">
         <div class="role">Co-founder · DBO</div>
         <h3>Dash</h3>
-        <div class="nat2">Head of the U.A.P.R. — the polar republic</div>
+        <div class="nat2">Creator and head of the U.A.P.R. — the polar republic</div>
         <p class="q">Stayed, kept the archive, and drew the goodbye. Now taking the world off paper and onto the open web.</p>
       </div>
     </div>
