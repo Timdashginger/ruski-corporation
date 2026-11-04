@@ -179,6 +179,29 @@ section{padding:96px 0}
 .goodbye .cap{position:absolute;left:10px;right:10px;bottom:10px;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:26px 16px 12px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#fff}
 @media(max-width:900px){.two,.story{grid-template-columns:1fr}}
 
+/* ---------- nation flag ---------- */
+.natflag{width:100%;aspect-ratio:3/2;object-fit:cover;margin-bottom:10px;border:1px solid #cbbf9f;display:block}
+
+/* ---------- founder's manuscript ---------- */
+.manifesto{display:grid;grid-template-columns:.8fr 1.2fr;gap:46px;align-items:start;margin:10px 0 48px}
+.ms-photo{position:relative}
+.ms-photo figure{margin:0;background:#fff;padding:14px 14px 42px;box-shadow:0 22px 48px rgba(50,42,26,.22);transform:rotate(-1.3deg);cursor:zoom-in;transition:.35s}
+.ms-photo figure:hover{transform:rotate(0deg) translateY(-4px);box-shadow:0 30px 60px rgba(50,42,26,.3)}
+.ms-photo img{width:100%;display:block}
+.ms-stamp{position:absolute;right:-8px;bottom:34px;background:var(--red);color:#fff;font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;padding:6px 11px;transform:rotate(-3deg);box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.ms-meta{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-top:18px;text-align:center;line-height:1.8}
+.ms-text h3{font-size:clamp(23px,3vw,32px);margin:10px 0 12px}
+.ms-text>p{font-size:14.6px;color:#39424f;line-height:1.75;margin:0 0 14px}
+.ms-q{font-family:var(--serif);font-size:17px;line-height:1.6;color:#1e2732;border-left:3px solid var(--red);padding:2px 0 2px 16px;margin:0 0 15px}
+.ms-q.big{font-size:20px;line-height:1.55}
+.ms-q .who{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-top:9px}
+.ms-thumbs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.ms-thumbs figure{margin:0;cursor:zoom-in}
+.ms-thumbs .im{overflow:hidden;border:1px solid #d7cbb0;background:#fff;aspect-ratio:3/4}
+.ms-thumbs img{width:100%;height:100%;object-fit:cover;object-position:top}
+.ms-thumbs figcaption{font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);padding:6px 2px 0}
+@media(max-width:900px){.manifesto{grid-template-columns:1fr;gap:30px}}
+
 /* ---------- evolution ---------- */
 #evolution{background:var(--ink2);color:#e9eef4}
 #evolution .shead p{color:rgba(233,238,244,.6)}
@@ -404,7 +427,7 @@ footer a{color:var(--amber)}
     <div class="shead rv">
       <div class="snum">Exhibit 02 — The World</div>
       <h2>Twenty nations, three oceans, one map</h2>
-      <p>Every nation has a position, a climate, an economy and a foreign policy. The two founders each govern one of the superpowers at the centre of the cold war.</p>
+      <p>Every nation has a position, a climate, an economy and a foreign policy. The two founders each govern a country of their own — Calvin the industrial federation of Fefoce, Dash the polar republic of DBO.</p>
     </div>
 
     <div class="world-grid">
@@ -419,16 +442,17 @@ footer a{color:var(--amber)}
           <p>The industrial superpower. Defence exports through Ferlen, low unemployment, a stock exchange that rises when others fall. Second-largest economy in the world, one per cent behind Noteversea.</p>
           <span class="owner">Calvin's nation</span>
         </div>
-        <div class="nat d">
+        <div class="nat">
           <h4>Federal Union of Euthesea</h4>
           <div class="en">F.U.E. · Eastern bloc</div>
           <p>The rival superpower and the centre of a sanctions-hit alliance. Supplies its allies through crisis, fights a cold war it never chose, and holds the line across two warzones.</p>
-          <span class="owner">Dash's nation</span>
         </div>
-        <div class="nat">
+        <div class="nat d">
+          <img class="natflag" src="assets/world/uapr-flag-t.jpg" alt="The national flag of the U.A.P.R. and DBO" loading="lazy">
           <h4>U.A.P.R. — DBO</h4>
           <div class="en">Union of Antartican Polar Republic</div>
-          <p>The polar republic. Heavy industry and oil pipelines, struck three times by UAMO air power.</p>
+          <p>The polar republic: six-tenths ice, snow and huge mountains, the rest rocky hills, plains, islands, lakes and coniferous forest reaching the latitude of southern Argentina. A penguin is its emblem. Heavy industry and oil pipelines — struck three times by UAMO air power.</p>
+          <span class="owner">Dash's nation</span>
         </div>
         <div class="nat">
           <h4>UAMO</h4>
@@ -618,9 +642,9 @@ footer a{color:var(--amber)}
         <p class="q">Left for the United Kingdom in 2024. The day he left, Dash drew him a farewell — and the world kept going, online.</p>
       </div>
       <div class="fcard d">
-        <div class="role">Co-founder · Euthesea</div>
+        <div class="role">Co-founder · DBO</div>
         <h3>Dash</h3>
-        <div class="nat2">Head of the Federal Union of Euthesea</div>
+        <div class="nat2">Head of the U.A.P.R. — the polar republic</div>
         <p class="q">Stayed, kept the archive, and drew the goodbye. Now taking the world off paper and onto the open web.</p>
       </div>
     </div>
@@ -649,6 +673,36 @@ footer a{color:var(--amber)}
           <figure data-full="assets/founders/radar-station.jpg" data-cap="Under the radar dish at the launch complex."><img src="assets/founders/radar-station.jpg" alt="The founders at a radar station" loading="lazy"></figure>
           <figure data-full="assets/founders/rocket-launch.jpg" data-cap="At the launch complex with the assembly tower behind them."><img src="assets/founders/rocket-launch.jpg" alt="The founders at a rocket launch complex" loading="lazy"></figure>
           <figure data-full="assets/founders/ruski-shirts.jpg" data-cap="The RUSKI shirts — their own world, on their own backs."><img src="assets/founders/ruski-shirts.jpg" alt="The founders in RUSKI shirts" loading="lazy"></figure>
+        </div>
+      </div>
+    </div>
+
+    <!-- the founder's own words -->
+    <div class="manifesto rv" id="manifesto">
+      <div class="ms-photo">
+        <figure data-full="assets/manuscript/page-1.jpg" data-cap="Page one of Dash's manuscript, written by hand in 2024 — 'In this writing, I will introduce a place that I knew well…'">
+          <img src="assets/manuscript/page-1.jpg" alt="Handwritten first page of Dash's manuscript describing the RUSKI world" loading="lazy">
+        </figure>
+        <div class="ms-stamp">Original manuscript</div>
+        <div class="ms-meta">Three pages · blue biro · 2024<br>Click to read full size</div>
+      </div>
+      <div class="ms-text">
+        <div class="eyebrow">In his own words</div>
+        <h3>A manifesto, written by hand at school</h3>
+        <p>In 2024 Dash was given an ordinary writing prompt: <i>describe a place you know well, real or from your imagination.</i> He wrote about a place that does not exist. Three pages, with a hand-drawn map folded into the middle of the exercise book. Spelling and grammar tidied here — the words, and the reasoning, are his own.</p>
+        <div class="ms-q big">"Every friend that joins this whole story will represent a country, and you have to govern your own country's politics and management system."</div>
+        <div class="ms-q">"You could say it is a simulator for the United Nations."</div>
+        <div class="ms-q">"It seems like a normal playhouse game, and it seems childish — but I can tell you that when we play this game, we usually base it on the latest political news. The only difference is the setting of the time period."</div>
+        <div class="ms-q">"In summary, RUSKI is not simply that in my mind. The whole project is still developing. I hope it will be a good thing to remember when my friends and I have grown up."<span class="who">— Dash, age 13, 2024</span></div>
+        <div class="ms-thumbs">
+          <figure data-full="assets/manuscript/page-2.jpg" data-cap="Page two — on why they built it, and the geography of DBO: six-tenths ice and snow, penguins for an emblem.">
+            <div class="im"><img src="assets/manuscript/page-2-t.jpg" alt="Manuscript page two" loading="lazy"></div>
+            <figcaption>Page two · why we built it</figcaption>
+          </figure>
+          <figure data-full="assets/manuscript/page-3.jpg" data-cap="Page three — the hand-drawn map folded into the exercise book, marked 'this is the 6th version of the world map'.">
+            <div class="im"><img src="assets/manuscript/page-3-t.jpg" alt="Manuscript page three with the folded hand-drawn world map" loading="lazy"></div>
+            <figcaption>Page three · the map</figcaption>
+          </figure>
         </div>
       </div>
     </div>
@@ -794,7 +848,7 @@ footer a{color:var(--amber)}
     <div class="shead rv">
       <div class="snum">Exhibit 08 — The Archive</div>
       <h2>Every sheet, in one place</h2>
-      <p>The complete digital archive: seventy-one originals. Click any sheet to view it full size.</p>
+      <p>The complete digital archive: seventy-one drawings, plus the national flag of the U.A.P.R. and Dash's handwritten manuscript. Click any sheet to view it full size.</p>
     </div>
 
     <div class="filters rv">
@@ -810,6 +864,7 @@ footer a{color:var(--amber)}
     </div>
 
     <div class="arch rv">
+      <figure class="world" data-full="assets/world/uapr-flag.jpg" data-cap="The national flag of the U.A.P.R. and DBO — orange and blue, five stars, and the polar arrow."><img src="assets/world/uapr-flag-t.jpg" alt="U.A.P.R. and DBO national flag" loading="lazy"></figure>
       <figure class="world" data-full="assets/world/world-map.jpg" data-cap="World map, sixth revision."><img src="assets/world/world-map-t.jpg" alt="World map" loading="lazy"></figure>
       <figure class="world" data-full="assets/world/vodka-to-carrier.jpg" data-cap="'From a bottle of vodka to a carrier' — the project's own tagline."><img src="assets/world/vodka-to-carrier-t.jpg" alt="Vodka to carrier artwork" loading="lazy"></figure>
       <figure class="world" data-full="assets/world/dressing-code.jpg" data-cap="Dressing Code 01 — uniform regulations."><img src="assets/world/dressing-code-t.jpg" alt="Dressing code sheet" loading="lazy"></figure>
@@ -872,6 +927,9 @@ footer a{color:var(--amber)}
       <figure class="energy" data-full="assets/energy/logo.jpg" data-cap="RUSKI Energy."><img src="assets/energy/logo-t.jpg" alt="Energy logo" loading="lazy"></figure>
       <figure class="energy" data-full="assets/energy/energy-01.jpg" data-cap="Turbine and grid."><img src="assets/energy/energy-01-t.jpg" alt="Turbine study" loading="lazy"></figure>
 
+      <figure class="founders" data-full="assets/manuscript/page-1.jpg" data-cap="The manuscript, page one, 2024."><img src="assets/manuscript/page-1-t.jpg" alt="Manuscript page one" loading="lazy"></figure>
+      <figure class="founders" data-full="assets/manuscript/page-2.jpg" data-cap="The manuscript, page two, 2024."><img src="assets/manuscript/page-2-t.jpg" alt="Manuscript page two" loading="lazy"></figure>
+      <figure class="founders" data-full="assets/manuscript/page-3.jpg" data-cap="The manuscript, page three — the folded map."><img src="assets/manuscript/page-3-t.jpg" alt="Manuscript page three" loading="lazy"></figure>
       <figure class="founders" data-full="assets/founders/camp-fort.jpg" data-cap="At the fort, 2024."><img src="assets/founders/camp-fort-t.jpg" alt="Founders at the fort" loading="lazy"></figure>
       <figure class="founders" data-full="assets/founders/radar-station.jpg" data-cap="Under the radar dish."><img src="assets/founders/radar-station-t.jpg" alt="Radar station" loading="lazy"></figure>
       <figure class="founders" data-full="assets/founders/rocket-launch.jpg" data-cap="At the launch complex."><img src="assets/founders/rocket-launch-t.jpg" alt="Launch complex" loading="lazy"></figure>
